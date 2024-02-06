@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.links ul li{
+    display: flex;
+    gap: 10px;
+}
+.user-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}

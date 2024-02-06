@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.square-photo{
+    width: 520px;
+    height: 650px;
+    background-color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+}
+.three-texts{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+.photo-and-mail{
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+.mail{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.four-texts{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.inputs input{
+    width: 450px;
+    height: 60px;
+    padding: 15px;
+    outline: none;
+    border: 1px solid gray;
+}
+.inputs textarea{
+    width: 450px;
+    padding: 15px;
+    outline: none;
+}
+.send-button button{
+    width: 200px;
+    height: 55px;
+    background-color: #f34f3f;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+.send-button button:hover{
+    background-color: #db3122;
+}

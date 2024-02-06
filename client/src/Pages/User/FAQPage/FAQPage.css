@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.faqpage-img img{
+    width: 100%;
+    height: 60vh;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+
+}
+.top-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex; 
+    text-align: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 10px;
+}
+
+.faqpage-top {
+    position: relative;
+}
+.middle-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.left-mid{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.search-inp input{
+    width: 250px;
+    height: 50px;
+    border: 1px solid #8b8b8b;
+}
+.spans{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.faqpage-middle{
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    gap: 130px;
+}
+.mid-right-text{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.middle-right{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.search-inp input{
+    padding: 10px;
+    border: 1px solid #6d6a6a;
+}
+.search-inp {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc; /* İstenirse inputa bir sınır ekleyebiliriz */
+    border-radius: 5px; /* İstenirse köşeleri yuvarlayabiliriz */
+  }
+  
+  .input-container input {
+    border: none; /* Input kenarlığını kaldırır */
+    padding: 10px; /* İstenirse içeriği biraz boşlukla ayırır */
+  }
+  
+  .input-container CiSearch {
+    margin-right: 5px; /* İkon ile input arasına biraz boşluk bırakır */
+  }
+  .left-mid-p{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  

@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flowers{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.top-mid-bot{
+    display: flex;
+    gap: 30px;
+}
+.six-flowers{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.flw-txt{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
