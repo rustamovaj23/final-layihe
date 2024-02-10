@@ -21,18 +21,24 @@ const FourPhotos = () => {
       <div className='all'>
         <div className='photo'>
         <div className='image'><img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/h3-team-img-1.png" alt="" /></div>
+        <div className="names">
         <p>CRYSTAL BROOKS</p>
         <p style={{"color":"#6d6a6a"}}>Florist</p>
         </div>
+        </div>
         <div className='photo'>
         <div className='image'><img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-team-img-2.png" alt="" /></div>
+        <div className="names">
         <p>SHIRLEY HARRIS</p>
         <p style={{"color":"#6d6a6a"}}>Manager</p>
         </div>
+        </div>
         <div className='photo'>
         <div className='image'><img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/h3-team-img-3.png" alt="" /></div>
-        <p>BEVERLY CLARK</p>
+       <div className="names">
+       <p>BEVERLY CLARK</p>
         <p style={{"color":"#6d6a6a"}}>Florist</p>
+       </div>
         </div>
         <div className='photo'>
         <div className='image'><img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/h3-team-img-4.png" alt="" /></div>

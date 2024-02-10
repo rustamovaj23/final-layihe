@@ -12,3 +12,8 @@
 .four-all{
     padding-top: 100px;
 }
+.photo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

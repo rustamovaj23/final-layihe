@@ -1,4 +1,6 @@
+import Standart from "../Components/Standart/Standart";
 import AboutUs from "../Pages/User/AboutUs/AboutUs";
+import Cart from "../Pages/User/Cart/Cart";
 import ContactUs from "../Pages/User/ContactUs/ContactUs";
 import FAQPage from "../Pages/User/FAQPage/FAQPage";
 import Gallery from "../Pages/User/Gallery/Gallery";
@@ -30,6 +32,14 @@ const ROUTER = [
             {
                 path:"/contactUs",
                 element:<ContactUs/>
+            },
+            {
+                path:"/cart",
+                element:<Cart/>
+            },
+            {
+                path:"/standart",
+                element:<Standart/>
             },
             {
                 path:"/portfolio",
