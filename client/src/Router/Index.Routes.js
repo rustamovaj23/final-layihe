@@ -7,6 +7,9 @@ import Gallery from "../Pages/User/Gallery/Gallery";
 import Home from "../Pages/User/Home/Home";
 import Portfolio from "../Pages/User/Portfolio/Portfolio";
 import UserRoot from "../Pages/User/UserRoot";
+import AdminRoot from "../Pages/Admin/AdminRoot"
+import AdminDashboard from "../Pages/Admin/Dashboard"
+import AdminAuth from "../Pages/Admin/Auth"
 
 const ROUTER = [
     {
@@ -44,6 +47,20 @@ const ROUTER = [
             {
                 path:"/portfolio",
                 element:<Portfolio/>
+            }
+        ]
+    },
+    {
+        path: '/admin',
+        element: <AdminAuth />,
+    },
+    {
+        path:"/admin/*",
+        element: <AdminRoot/>,
+        children:[
+            {
+                path: "dashboard",
+                element: <AdminDashboard/>
             }
         ]
     }

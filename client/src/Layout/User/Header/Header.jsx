@@ -74,6 +74,7 @@ const Header = () => {
                     </li>
                   </ul>
                 </nav>
+                <Link to={"admin"}>Admin Panel</Link>
               </div>
             </div>
           </div>

@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
+    <footer className="admin-footer">
+      <div className="container">
+        <span>Developed by Jala Rustamova</span>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
