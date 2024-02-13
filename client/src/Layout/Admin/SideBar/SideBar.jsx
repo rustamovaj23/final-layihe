@@ -18,11 +18,11 @@ const SideBar = () => {
         </li>
         <li>
         <BiCategoryAlt style={{"color":"white", "fontWeight":"bolder","marginTop":"5px", "fontSize":"20px"}}/>
-          <a  style={{"marginTop":"4px", "fontSize":"16px"}} href="#">Categories</a>
+          <a  style={{"marginTop":"4px", "fontSize":"16px"}} href="/admin/categories">Categories</a>
         </li>
         <li>
         <CiBoxList style={{"color":"white", "fontWeight":"bolder","marginTop":"5px", "fontSize":"20px"}}/>
-          <a  style={{"marginTop":"4px", "fontSize":"16px"}} href="#">Products</a>
+          <a  style={{"marginTop":"4px", "fontSize":"16px"}} href="/admin/products/">Products</a>
         </li>
       </ul>
     </nav>

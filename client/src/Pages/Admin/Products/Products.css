@@ -1,0 +1,24 @@
+.addBtn{
+    background-color: #0b315a;
+    width: 100px;
+    height: 40px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.addBtn:hover{
+    background-color: #0d3e72;
+}
+button{
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+}
+.add{
+    display: flex;
+    justify-content: end;
+    padding-right: 30px;
+}
+.table{
+    padding-top: 30px;
+}

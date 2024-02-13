@@ -10,6 +10,8 @@ import UserRoot from "../Pages/User/UserRoot";
 import AdminRoot from "../Pages/Admin/AdminRoot"
 import AdminDashboard from "../Pages/Admin/Dashboard"
 import AdminAuth from "../Pages/Admin/Auth"
+import Products from "../Pages/Admin/Products/Products";
+ import Categories from "../Pages/Admin/Categories/Categories";
 
 const ROUTER = [
     {
@@ -61,7 +63,16 @@ const ROUTER = [
             {
                 path: "dashboard",
                 element: <AdminDashboard/>
-            }
+            },
+            {
+                path:"products",
+                element:<Products/>
+            },
+            {
+                path:"categories",
+                element:<Categories/>
+            },
+
         ]
     }
 ]

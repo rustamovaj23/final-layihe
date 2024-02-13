@@ -1,39 +1,39 @@
 const User = require("../Models/User.Model")
 
 const userController = {
-    getAll: async (req, res) =>{
-        try{
+    getAll: async (req, res) => {
+        try {
             const users = await User.find()
             res.send(users)
-        }catch(error){
+        } catch (error) {
             res.status(404).send("item not found")
         }
     },
-    getById: async (req, res) =>{
-        try{
-            const {id}=req.params
+    getById: async (req, res) => {
+        try {
+            const {id} = req.params
             const target = await User.findById(id)
             res.send(target)
-        }catch(error){
+        } catch (error) {
             res.status(404).send("item not found")
         }
     },
-    post: async (req, res) =>{
-        try{
-            const {image, name, price, categories}=req.body
-            const newUser = new User ({name,image, price, categories})
+    post: async (req, res) => {
+        try {
+            const {image, name, price, categories} = req.body
+            const newUser = new User({name, image, price, categories})
             await newUser.save()
             res.send(newUser)
-        }catch(error){
+        } catch (error) {
             res.status(404).send("item not created")
         }
     },
-    delete: async (req, res) =>{
-        try{
-            const {id} =req.params
+    delete: async (req, res) => {
+        try {
+            const {id} = req.params
             await User.findByIdAndDelete(id)
             res.send("item deleted")
-        }catch(error){
+        } catch (error) {
             res.status(404).send("item deleted")
         }
     }
