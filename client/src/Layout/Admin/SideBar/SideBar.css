@@ -1,0 +1,41 @@
+.sidebar {
+    background-color: #010d1a;  
+    color: gray; 
+    width: 200px;
+    height: 100%; 
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    overflow-x: hidden;
+    padding-top: 20px; 
+    transition: width 0.5s;
+  }
+  .menu{
+    color: white;
+    padding-left: 13px;
+    font-size: 23px;
+    font-weight: bold;
+  }
+  .sidebar ul {
+    list-style-type: none;
+    padding-top: 30px;
+  }
+  
+  .sidebar ul li {
+    padding: 15px 20px; 
+    transition: background-color 0.3s; 
+  }
+  .sidebar li{
+    display: flex;
+    gap: 15px;
+  }
+  
+  .sidebar ul li a {
+    color: white; 
+    text-decoration: none;
+  }
+  
+  /* Hover efekti */
+  .sidebar ul li:hover {
+    background-color: #0e263d;
+  }

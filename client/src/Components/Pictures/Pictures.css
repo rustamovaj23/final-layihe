@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top-mid-bot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+}
+.flw-img1 {
+    position: relative;
+    width: 350px;
+    height: 400px;
+  }
+  
+  .flw-img1 img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flw-img1::after {
+    content: "FLOWER POWER"; /* Görüntülenmesini istediğiniz metni buraya yazın */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 240, 240, 0.8); /* Arkaplan rengini ve şeffaflığını ayarlayabilirsiniz */
+    color: black; /* Metin rengini ayarlayabilirsiniz */
+    opacity: 0; /* Başlangıçta metni gizleyin */
+    transition: opacity 0.6s; /* Animasyon efekti için geçiş süresini ayarlayabilirsiniz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flw-img1:hover::after {
+    opacity: 5; /* Hover olduğunda metni görünür yapın */
+  }
+  .flw-img2 {
+    position: relative;
+    width: 350px;
+    height: 400px;
+  }
+  
+  .flw-img2 img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flw-img2::after {
+    content: "FLORISTY SHOPS"; /* Görüntülenmesini istediğiniz metni buraya yazın */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 240, 240, 0.8); /* Arkaplan rengini ve şeffaflığını ayarlayabilirsiniz */
+    color: black; /* Metin rengini ayarlayabilirsiniz */
+    opacity: 0; /* Başlangıçta metni gizleyin */
+    transition: opacity 0.6s; /* Animasyon efekti için geçiş süresini ayarlayabilirsiniz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flw-img2:hover::after {
+    opacity: 5; /* Hover olduğunda metni görünür yapın */
+  }
+  .flw-img3 {
+    position: relative;
+    width: 350px;
+    height: 400px;
+  }
+  
+  .flw-img3 img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flw-img3::after {
+    content: "ENGLISH GARDEN"; /* Görüntülenmesini istediğiniz metni buraya yazın */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 240, 240, 0.8); /* Arkaplan rengini ve şeffaflığını ayarlayabilirsiniz */
+    color: black; /* Metin rengini ayarlayabilirsiniz */
+    opacity: 0; /* Başlangıçta metni gizleyin */
+    transition: opacity 0.6s; /* Animasyon efekti için geçiş süresini ayarlayabilirsiniz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flw-img3:hover::after {
+    opacity: 5; /* Hover olduğunda metni görünür yapın */
+  }
+  .flw-img4 {
+    position: relative;
+    width: 350px;
+    height: 400px;
+  }
+  
+  .flw-img4 img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flw-img4::after {
+    content: "FLORICULTURE"; /* Görüntülenmesini istediğiniz metni buraya yazın */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 240, 240, 0.8); /* Arkaplan rengini ve şeffaflığını ayarlayabilirsiniz */
+    color: black; /* Metin rengini ayarlayabilirsiniz */
+    opacity: 0; /* Başlangıçta metni gizleyin */
+    transition: opacity 0.6s; /* Animasyon efekti için geçiş süresini ayarlayabilirsiniz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flw-img4:hover::after {
+    opacity: 5; /* Hover olduğunda metni görünür yapın */
+  }
+  .flw-img5 {
+    position: relative;
+    width: 350px;
+    height: 400px;
+  }
+  
+  .flw-img5 img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flw-img5::after {
+    content: "MEANING"; /* Görüntülenmesini istediğiniz metni buraya yazın */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 240, 240, 0.8); /* Arkaplan rengini ve şeffaflığını ayarlayabilirsiniz */
+    color: black; /* Metin rengini ayarlayabilirsiniz */
+    opacity: 0; /* Başlangıçta metni gizleyin */
+    transition: opacity 0.6s; /* Animasyon efekti için geçiş süresini ayarlayabilirsiniz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flw-img5:hover::after {
+    opacity: 5; /* Hover olduğunda metni görünür yapın */
+  }
+  .flw-img6 {
+    position: relative;
+    width: 350px;
+    height: 400px;
+  }
+  
+  .flw-img6 img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flw-img6::after {
+    content: "DUTCH STYLE"; /* Görüntülenmesini istediğiniz metni buraya yazın */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 240, 240, 0.8); /* Arkaplan rengini ve şeffaflığını ayarlayabilirsiniz */
+    color: black; /* Metin rengini ayarlayabilirsiniz */
+    opacity: 0; /* Başlangıçta metni gizleyin */
+    transition: opacity 0.6s; /* Animasyon efekti için geçiş süresini ayarlayabilirsiniz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flw-img6:hover::after {
+    opacity: 5; /* Hover olduğunda metni görünür yapın */
+  }
+  .flw-img7 {
+    position: relative;
+    width: 350px;
+    height: 400px;
+  }
+  
+  .flw-img7 img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flw-img7::after {
+    content: "DRIED ROSES"; /* Görüntülenmesini istediğiniz metni buraya yazın */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 240, 240, 0.8); /* Arkaplan rengini ve şeffaflığını ayarlayabilirsiniz */
+    color: black; /* Metin rengini ayarlayabilirsiniz */
+    opacity: 0; /* Başlangıçta metni gizleyin */
+    transition: opacity 0.6s; /* Animasyon efekti için geçiş süresini ayarlayabilirsiniz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flw-img7:hover::after {
+    opacity: 5; /* Hover olduğunda metni görünür yapın */
+  }
+  .flw-img8 {
+    position: relative;
+    width: 350px;
+    height: 400px;
+  }
+  
+  .flw-img8 img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flw-img8::after {
+    content: "FLOWER EXPERTS"; /* Görüntülenmesini istediğiniz metni buraya yazın */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 240, 240, 0.8); /* Arkaplan rengini ve şeffaflığını ayarlayabilirsiniz */
+    color: black; /* Metin rengini ayarlayabilirsiniz */
+    opacity: 0; /* Başlangıçta metni gizleyin */
+    transition: opacity 0.6s; /* Animasyon efekti için geçiş süresini ayarlayabilirsiniz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flw-img8:hover::after {
+    opacity: 5; /* Hover olduğunda metni görünür yapın */
+  }
+  .flw-img9 {
+    position: relative;
+    width: 350px;
+    height: 400px;
+  }
+  
+  .flw-img9 img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flw-img9::after {
+    content: "IKEBANA"; /* Görüntülenmesini istediğiniz metni buraya yazın */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 240, 240, 0.8); /* Arkaplan rengini ve şeffaflığını ayarlayabilirsiniz */
+    color: black; /* Metin rengini ayarlayabilirsiniz */
+    opacity: 0; /* Başlangıçta metni gizleyin */
+    transition: opacity 0.6s; /* Animasyon efekti için geçiş süresini ayarlayabilirsiniz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flw-img9:hover::after {
+    opacity: 5; /* Hover olduğunda metni görünür yapın */
+  }
+  

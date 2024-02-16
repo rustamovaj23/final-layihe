@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.load-more-btn{
+    /* Sayfanın tam ortasına yerleştirmek için flex kullanabiliriz */
+    display: flex;
+    justify-content: center; /* Yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    padding-top: 80px;
+}
+.load-btn button{
+    width: 200px;
+    height: 70px;
+    background-color: #f34f3f;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+.load-btn button:hover{
+    background-color: #f13e2e;
+}

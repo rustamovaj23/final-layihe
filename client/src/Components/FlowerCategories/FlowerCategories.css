@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.flower-categories {
+  display: flex;
+  padding-left: 110px;
+  padding-top: 40px;
+}
+
+.flower-categories a {
+  margin-right: 10px; /* Bağlantılar arasında 10px boşluk bırak */
+  color: #1b1b1b; /* Bağlantı rengini siyah yap */
+  text-decoration: none; /* Bağlantı altı çizgisini kaldır */
+}
+
+.flower-categories a:hover, .flower-categories a.active {
+  color: #f34f3f; /* Bağlantı rengini gri yap hover durumunda */
+}

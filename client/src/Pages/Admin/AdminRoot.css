@@ -1,0 +1,33 @@
+html, body, #root, .layout-wrapper{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.layout-wrapper {
+    display: flex;
+    flex-direction: row; /* Yan yana hizalama */
+  }
+  
+  .sideBar {
+    flex: 0 0 200px;
+ 
+  }
+
+  .page-content{
+    flex: 1;
+  }
+  
+  .content-wrapper {
+    flex: 1; /* İçerik alanının esnek genişliği */
+    display: flex;
+    flex-direction: column; /* Dikey hizalama */
+  }
+  
+  .header {
+    flex: 0 0 auto; /* Başlığın boyutunu otomatik olarak ayarla */
+  }
+  
+  .footer {
+    flex: 0 0 auto; /* Altbilginin boyutunu otomatik olarak ayarla */
+  }
+  

@@ -1,0 +1,35 @@
+.all-admin-header {
+    width: 100%;
+    height: 60px;
+    background-color: #071725;
+    border-left: 1px solid  gray; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+  }
+  .p-icon{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+.admin-header{
+    display: flex;
+    align-items: center;
+}
+  .background{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 195px;
+
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    margin-right: 30px;
+  }
+
+
+
+  
