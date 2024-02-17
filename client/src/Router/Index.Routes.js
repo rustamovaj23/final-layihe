@@ -13,6 +13,11 @@ import AdminAuth from "../Pages/Admin/Auth"
 import Products from "../Pages/Admin/Products/Products";
  import Categories from "../Pages/Admin/Categories/Categories";
 import HomeCategories from '../Pages/User/Categories/Categories'
+import Link from "../Pages/User/Link/Link";
+import Audio from "../Pages/User/Audio/Audio";
+import MyAccount from "../Pages/User/MyAccount/MyAccount";
+import Quote from "../Pages/User/Quote/Quote";
+import Videos from "../Pages/User/Videos/Videos";
 
 
 const ROUTER = [
@@ -41,8 +46,28 @@ const ROUTER = [
                 element:<AboutUs/>
             },
             {
+                path:"/link",
+                element:<Link/>
+            },
+            {
                 path:"/contactUs",
                 element:<ContactUs/>
+            },
+            {
+                path:"/myAccount",
+                element:<MyAccount/>
+            },
+            {
+                path:"/quote",
+                element:<Quote/>
+            },
+            {
+                path:"/audio",
+                element:<Audio/>
+            },
+            {
+                path:"/videos",
+                element:<Videos/>
             },
             {
                 path:"/cart",

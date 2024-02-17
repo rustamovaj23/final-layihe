@@ -9,6 +9,7 @@ import { Parallax } from "swiper/modules";
 import Axios from "../../../Helpers/Axios";
 import { handleError } from "../../../Helpers/Helpers";
 import Loading from "../../../Components/Loading/Loading";
+import FirstSlide from "../../../Components/FirstSlide/FirstSlide";
 
 const Home = () => {
   const [categories, setCategories] = useState([]);
@@ -39,6 +40,7 @@ const Home = () => {
 
   return (
     <div>
+      <FirstSlide/>
       {loading && <Loading />}
 
       <FlowerCategories currentRoute="all" categories={categories} />

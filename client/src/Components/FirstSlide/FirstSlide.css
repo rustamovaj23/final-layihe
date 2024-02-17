@@ -1,0 +1,30 @@
+.slider-imag img{
+    position: relative;
+}
+.slider-textt{
+    position: absolute;
+    padding-right: 750px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.textts{
+    height: 1vh;
+}
+.imza{
+    padding-top: 20px;
+}
+.textts-1{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.textts-2{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+.textts-2 p{
+    font-size: 20px;
+}

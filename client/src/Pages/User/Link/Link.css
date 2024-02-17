@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.fiorello-left-top{
+    width: 800px;
+    height: 18vh;
+    background-color: #f9fafd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fiorello-left-top p{
+    font-size: 25px;
+}
+.fiorello-left{
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.fiorello-left-second{
+    display: flex;
+    flex-direction: column;
+}
+.fiorello-left-second p{
+    font-size: 18px;
+    color: gray;
+    height: 1vh;
+}
+.fiorello-left-third p{
+    height: 3vh;
+    font-size: 25px;
+}
+.fiorello-left-third{
+    height: 15vh;
+    width: 800px;
+    background-color: #f9fafd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:start;
+}
+.fiorello-left-forth p{
+    height: 1vh;
+    color: gray;
+    font-size: 18px;
+}
+.photos-first img{
+    width: 260px;
+}
+.photos-first{
+display: flex;
+gap: 20px;
+padding-top: 40px;
+}
+.cl-1{
+    width: 540px;
+    height: 270px;
+}
+.cl-2{
+    width: 260px;
+    height: 270px;
+}
+.photos-second{
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+}
+.fiorello-left-fifth p{
+    height: 1vh;
+    color: gray;
+    font-size: 18px;
+}
+.fiorello-left-fifth{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.fiorello-left-ttt{
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+}
+.fiorello-left-ttt p{
+    color: gray;
+}
+hr{
+    width: 830px;
+}
+.first-photo-comment{
+    display: flex;
+    gap: 20px;
+}
+.all-textss{
+    display: flex;
+    flex-direction: column;
+    grid-area: 20px;
+}
+.textarea textarea{
+    width: 820px;
+    border: 1px solid gray;
+}
+.submittt{
+    background-color: #f34f3f;
+    width: 110px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.inputlarrr{
+    height: 60px;
+    width: 266px;
+    padding: 10px;
+}
+.inputlar{
+    display: flex;
+    gap: 10px;
+}
+.input-bttn{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.post-a-comment{
+    padding-top: 40px;
+}
+.link-page{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.fiorello-right{
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.fiorello-right-second p {
+    height: 2vh;
+}
+.rcnt-img img{
+    width: 120px;
+}
+.recent{
+    display: flex;
+    gap: 13px;
+}
+.rcnt{
+    display: flex;
+}
+.recent-posts-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.recent-posts{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

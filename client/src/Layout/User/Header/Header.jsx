@@ -31,25 +31,35 @@ const Header = () => {
                         </div>
                       </Link>
                     </li>
-                    <li className="pagesHover">
-                      <Link to={"/"}>
+                    <li className="dropdown">
+                      <a
+                        href="#"
+                        className="dropdown-toggle"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
                         <div className="headText">
                           <span className="headTextInside">Pages</span>
                         </div>
-                      </Link>
-                      <div className="pagesHoverInside">
-                        <div className="pagesHoverInsideBox">
-                          <ul>
-                            <li>
-                              <Link>
-                                <div className="headText">
-                                  <span className="headTextInside">About Us</span>
-                                </div>
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            Action
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            Another action
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            Something else here
+                          </a>
+                        </li>
+                      </ul>
                     </li>
                     <li>
                       <Link to={"/"}>
@@ -68,7 +78,7 @@ const Header = () => {
                     <li>
                       <Link to={"/"}>
                         <div className="headText">
-                          <span className="headTextInside">Blog</span>
+                          <span className="headTextInside">Post Types</span>
                         </div>
                       </Link>
                     </li>
