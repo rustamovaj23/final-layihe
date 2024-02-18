@@ -11,103 +11,107 @@ import AdminRoot from "../Pages/Admin/AdminRoot"
 import AdminDashboard from "../Pages/Admin/Dashboard"
 import AdminAuth from "../Pages/Admin/Auth"
 import Products from "../Pages/Admin/Products/Products";
- import Categories from "../Pages/Admin/Categories/Categories";
+import Categories from "../Pages/Admin/Categories/Categories";
 import HomeCategories from '../Pages/User/Categories/Categories'
 import Link from "../Pages/User/Link/Link";
 import Audio from "../Pages/User/Audio/Audio";
 import MyAccount from "../Pages/User/MyAccount/MyAccount";
 import Quote from "../Pages/User/Quote/Quote";
 import Videos from "../Pages/User/Videos/Videos";
+import ProductDetail from "../Pages/User/ProductDetail/ProductDetail"
 
 
 const ROUTER = [
     {
-        path:"/",
+        path: "/",
         element: <UserRoot/>,
-        children:[
+        children: [
             {
-                path:"",
-                element:<Home/>
+                path: "",
+                element: <Home/>
             },
             {
-                path:"/categories/:slug",
-                element:<HomeCategories/>
+                path: "/categories/:slug",
+                element: <HomeCategories/>
             },
             {
-                path:"/faqPage",
-                element:<FAQPage/>
+                path: "/product/:slug",
+                element: <ProductDetail/>
             },
             {
-                path:"/gallery",
-                element:<Gallery/>
+                path: "/faqPage",
+                element: <FAQPage/>
             },
             {
-                path:"/aboutUs",
-                element:<AboutUs/>
+                path: "/gallery",
+                element: <Gallery/>
             },
             {
-                path:"/link",
-                element:<Link/>
+                path: "/aboutUs",
+                element: <AboutUs/>
             },
             {
-                path:"/contactUs",
-                element:<ContactUs/>
+                path: "/link",
+                element: <Link/>
             },
             {
-                path:"/myAccount",
-                element:<MyAccount/>
+                path: "/contactUs",
+                element: <ContactUs/>
             },
             {
-                path:"/quote",
-                element:<Quote/>
+                path: "/myAccount",
+                element: <MyAccount/>
             },
             {
-                path:"/audio",
-                element:<Audio/>
+                path: "/quote",
+                element: <Quote/>
             },
             {
-                path:"/videos",
-                element:<Videos/>
+                path: "/audio",
+                element: <Audio/>
             },
             {
-                path:"/cart",
-                element:<Cart/>
+                path: "/videos",
+                element: <Videos/>
             },
             {
-                path:"/standart",
-                element:<Standart/>
+                path: "/cart",
+                element: <Cart/>
             },
             {
-                path:"/portfolio",
-                element:<Portfolio/>
+                path: "/standart",
+                element: <Standart/>
+            },
+            {
+                path: "/portfolio",
+                element: <Portfolio/>
             }
         ]
     },
     {
         path: '/admin',
-        element: <AdminAuth />,
+        element: <AdminAuth/>,
     },
     {
-        path:"/admin/*",
+        path: "/admin/*",
         element: <AdminRoot/>,
-        children:[
+        children: [
             {
                 path: "dashboard",
                 element: <AdminDashboard/>
             },
             {
-                path:"products",
-                element:<Products/>
+                path: "products",
+                element: <Products/>
             },
             {
-                path:"categories",
-                element:<Categories/>
+                path: "categories",
+                element: <Categories/>
             },
 
         ]
     }
 ]
-
 
 
 export default ROUTER

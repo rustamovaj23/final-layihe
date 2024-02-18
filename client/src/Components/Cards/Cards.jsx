@@ -4,7 +4,7 @@ import Card from "../Card/Card";
 const Cards = ({products}) => {
   return (
     <div className="container">
-      <div className="row">
+      <div className="row product-list">
         {products.map((product, index) => {
           return <Card key={index} product={product} />;
         })}

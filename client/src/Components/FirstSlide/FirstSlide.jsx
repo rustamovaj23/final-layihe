@@ -18,13 +18,13 @@ const FirstSlide = () => {
           </div>
           <div className="slider-textt">
             <div className="textts-1">
-            <p style={{"font-family": "Playfair Display", "fontSize":"45px"}}>Send <span style={{"color":"red","font-family": "Playfair Display"}}>flowers </span> like</p>
-            <p style={{"font-family": "Playfair Display", "fontSize":"45px"}}>you mean it.</p>
+            <p style={{"fontFamily": "Playfair Display", "fontSize":"45px"}}>Send <span style={{"color":"red","fontFamily": "Playfair Display"}}>flowers </span> like</p>
+            <p style={{"fontFamily": "Playfair Display", "fontSize":"45px"}}>you mean it.</p>
             </div>
             <div className="textts-2">
-              <p style={{"color":"gray","font-family": "Playfair Display"}}>Where flowers are our inspiration to create lasting</p>
-              <p style={{"color":"gray","font-family": "Playfair Display"}}>memories. Whatever the occasion, uour flowers will</p>
-              <p style={{"color":"gray","font-family": "Playfair Display"}}>make it special cursus a sit amet mauris</p>
+              <p style={{"color":"gray","fontFamily": "Playfair Display"}}>Where flowers are our inspiration to create lasting</p>
+              <p style={{"color":"gray","fontFamily": "Playfair Display"}}>memories. Whatever the occasion, uour flowers will</p>
+              <p style={{"color":"gray","fontFamily": "Playfair Display"}}>make it special cursus a sit amet mauris</p>
             </div>
 
           </div>
@@ -38,13 +38,13 @@ const FirstSlide = () => {
           </div>
           <div className="slider-textt">
             <div className="textts-1">
-            <p style={{"font-family": "Playfair Display", "fontSize":"45px"}}>Send <span style={{"color":"red","font-family": "Playfair Display"}}>flowers </span> like</p>
-            <p style={{"font-family": "Playfair Display", "fontSize":"45px"}}>you mean it.</p>
+            <p style={{"fontFamily": "Playfair Display", "fontSize":"45px"}}>Send <span style={{"color":"red","fontFamily": "Playfair Display"}}>flowers </span> like</p>
+            <p style={{"fontFamily": "Playfair Display", "fontSize":"45px"}}>you mean it.</p>
             </div>
             <div className="textts-2">
-              <p style={{"color":"gray","font-family": "Playfair Display"}}>Where flowers are our inspiration to create lasting</p>
-              <p style={{"color":"gray","font-family": "Playfair Display"}}>memories. Whatever the occasion, uour flowers will</p>
-              <p style={{"color":"gray","font-family": "Playfair Display"}}>make it special cursus a sit amet mauris</p>
+              <p style={{"color":"gray","fontFamily": "Playfair Display"}}>Where flowers are our inspiration to create lasting</p>
+              <p style={{"color":"gray","fontFamily": "Playfair Display"}}>memories. Whatever the occasion, uour flowers will</p>
+              <p style={{"color":"gray","fontFamily": "Playfair Display"}}>make it special cursus a sit amet mauris</p>
             </div>
             </div>
         </SwiperSlide>
@@ -57,13 +57,13 @@ const FirstSlide = () => {
           </div>
           <div className="slider-textt">
             <div className="textts-1">
-            <p style={{"font-family": "Playfair Display", "fontSize":"45px"}}>Send <span style={{"color":"red","font-family": "Playfair Display"}}>flowers </span> like</p>
-            <p style={{"font-family": "Playfair Display", "fontSize":"45px"}}>you mean it.</p>
+            <p style={{"fontFamily": "Playfair Display", "fontSize":"45px"}}>Send <span style={{"color":"red","fontFamily": "Playfair Display"}}>flowers </span> like</p>
+            <p style={{"fontFamily": "Playfair Display", "fontSize":"45px"}}>you mean it.</p>
             </div>
             <div className="textts-2">
-              <p style={{"color":"gray","font-family": "Playfair Display"}}>Where flowers are our inspiration to create lasting</p>
-              <p style={{"color":"gray","font-family": "Playfair Display"}}>memories. Whatever the occasion, uour flowers will</p>
-              <p style={{"color":"gray","font-family": "Playfair Display"}}>make it special cursus a sit amet mauris</p>
+              <p style={{"color":"gray","fontFamily": "Playfair Display"}}>Where flowers are our inspiration to create lasting</p>
+              <p style={{"color":"gray","fontFamily": "Playfair Display"}}>memories. Whatever the occasion, uour flowers will</p>
+              <p style={{"color":"gray","fontFamily": "Playfair Display"}}>make it special cursus a sit amet mauris</p>
             </div>
             </div>
           

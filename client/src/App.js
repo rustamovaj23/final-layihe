@@ -6,7 +6,7 @@ import axios from "axios"
 import dataContext from "./Context/Context";
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { handleSuccess } from "./Helpers/Helpers";
+import {handleSuccess} from "./Helpers/Helpers";
 
 const router = createBrowserRouter(ROUTER)
 
@@ -16,40 +16,59 @@ function App() {
 
     const [basket, setbasket] = useState(
         localStorage.getItem("BasketItem") ? JSON.parse(localStorage.getItem("BasketItem")) : []
-      );
+    );
 
 
+    const removeFromBasket = (itemId) => {
+        const itemIndex = basket.findIndex(item => item.id == itemId);
+        if (itemIndex > -1) {
+            basket.splice(itemIndex, 1);
+            setbasket([...basket]);
+            localStorage.setItem("BasketItem", JSON.stringify([...basket]));
+            handleSuccess('Məhsul səbətdən silindi')
+        }
+    };
 
+    const decreaseBtn = (itemId) => {
+        const target = basket.find(item => item.id == itemId);
+        if (target && target.count > 1) {
+            target.count -= 1
+            target.totalPrice = target.product.price * target.count;
+            setbasket([...basket]);
+            localStorage.setItem("BasketItem", JSON.stringify([...basket]));
+        }
+    }
 
-      const removeFrombasket = (product) => {
-        const target = basket.find(item => item._id == product._id);
-        basket.splice(basket.indexOf(target), 1);
-        setbasket([...basket]);
-        localStorage.setItem("BasketItem", JSON.stringify([...basket]));
-    
-        // toast.error("Səbətdən silindi.");
-      };
-    
-      const AddtoBasket = (product) => {
+    const increaseBtn = (itemId) => {
+        const target = basket.find(item => item.id == itemId);
+        if (target && target.count + 1 <= target.product.quantity) {
+            target.count += 1
+            target.totalPrice = target.product.price * target.count;
+            setbasket([...basket]);
+            localStorage.setItem("BasketItem", JSON.stringify([...basket]));
+        }
+    }
+
+    const AddtoBasket = (product) => {
         const target = basket.find(item => item.product._id == product._id);
         if (target) {
-          target.count += 1;
-          target.totalPrice = product.price * target.count;
-          setbasket([...basket]);
-          localStorage.setItem("BasketItem", JSON.stringify([...basket]));
-          handleSuccess('Səbətə əlavə edildi')
+            target.count += 1;
+            target.totalPrice = product.price * target.count;
+            setbasket([...basket]);
+            localStorage.setItem("BasketItem", JSON.stringify([...basket]));
+            handleSuccess('Səbətə əlavə edildi')
         } else {
-          const BasketProduct = {
-            id: product._id,
-            product: product,
-            count: 1,
-            totalPrice: product.price
-          };
-          setbasket([...basket, BasketProduct]);
-          localStorage.setItem("BasketItem", JSON.stringify([...basket, BasketProduct]));
-          handleSuccess('Səbətə əlavə edildi')
+            const BasketProduct = {
+                id: product._id,
+                product: product,
+                count: 1,
+                totalPrice: product.price
+            };
+            setbasket([...basket, BasketProduct]);
+            localStorage.setItem("BasketItem", JSON.stringify([...basket, BasketProduct]));
+            handleSuccess('Səbətə əlavə edildi')
         }
-      };
+    };
 
     useEffect(() => {
         axios.get("http://localhost:8080/users").then(res => {
@@ -60,9 +79,13 @@ function App() {
     }, [])
 
     const value = {
-        data, setData,    AddtoBasket,
-        basket
-
+        data,
+        setData,
+        AddtoBasket,
+        basket,
+        removeFromBasket,
+        decreaseBtn,
+        increaseBtn
     }
 
     return (

@@ -7,12 +7,12 @@ const MyAccount = () => {
   return (
     <div className="my-account">
       <div className="account">
-        <p style={{ "font-family": "Playfair Display", fontSize: "55px" }}>
+        <p style={{ "fontFamily": "Playfair Display", fontSize: "55px" }}>
           My Account
         </p>
         <p
           style={{
-            "font-family": "Playfair Display",
+            "fontFamily": "Playfair Display",
             fontSize: "17px",
             color: "gray",
           }}
@@ -22,7 +22,7 @@ const MyAccount = () => {
       </div>
       <div className="logins">
       <div className="login-txt">
-        <p style={{"fontSize":"40px","font-family": "Playfair Display", "fontWeight":"bold" }}>Login</p>
+        <p style={{"fontSize":"40px","fontFamily": "Playfair Display", "fontWeight":"bold" }}>Login</p>
       </div>
       <div className="inputes">
       <div className="first-inp">

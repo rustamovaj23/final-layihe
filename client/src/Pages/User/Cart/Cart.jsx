@@ -1,69 +1,39 @@
-import React, { useContext } from "react";
+import React, {useEffect, useState} from "react";
 import CartText from "../../../Components/CartText/CartText";
-import dataContext from "../../../Context/Context";
-import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
-
+import CartTable from "../../../Components/CartTable/CartTable";
+import CartCoupon from "../../../Components/CartCoupon/CartCoupon";
+import CartTotals from "../../../Components/CartTotals/CartTotals";
+import './Cart.css'
+import {handleError, handleSuccess} from "../../../Helpers/Helpers";
 
 const Cart = () => {
-  const { basket, decreaseBtn, increase, removeFrombasket } =
-    useContext(dataContext);
-
-  const totalOrderAmount = basket.reduce(
-    (total, item) => total + item.totalPrice,
-    0
-  );
-
-  return (
-    <div className="basket">
-      <div className="baskett">
-        <div className="bas">
-          <CartText />
-          {basket.map((item, index) => (
-            <div className="left-basket" key={index}>
-              <div className="sk">
-                <img src={item.product.images[0].url} alt="" />
-              </div>
-              <div className="logo">
-                <p className="saam">Yeni</p>
-              </div>
-              <div className="bosduz"></div>
-              <div className="altalt">
-                <div className="writeone">
-                  <p>{item.product.name}</p>
-                  <span
-                    className="l"
-                    onClick={() => {
-                      removeFrombasket(item);
-                    }}
-                  ></span>
-                </div>
-                <div className="twobtn">
-                  <div className="count">
-                    <span>
-                      <MdArrowBackIos
-                        onClick={() => {
-                          decreaseBtn(item);
-                        }}
-                      />
-                    </span>
-                    <p>{item.count}</p>
-                    <span>
-                      <MdArrowForwardIos
-                        onClick={() => {
-                          increase(item);
-                        }}
-                      />
-                    </span>
-                  </div>
-                  <p className="total">{item.totalPrice}₼</p>
-                </div>
-              </div>
+    const [coupon, setCoupon] = useState('')
+    const [appliedCoupon, setAppliedCoupon] = useState(false)
+    const couponCode = {
+        code: 'jale',
+        discount: 15 // faiz
+    }
+    useEffect(() => {
+        if (coupon) {
+            if (couponCode.code == coupon) {
+                setAppliedCoupon(true)
+                handleSuccess(`Kupon kodu tətbiq edildi. Endirim : ${couponCode.discount}%`)
+            } else {
+                setAppliedCoupon(false)
+                handleError(`Kupon kodu yanlışdır`)
+            }
+        }
+    }, [coupon])
+    return (
+        <div className="basket">
+            <CartText/>
+            <div className="container">
+                <CartTable/>
+                <CartCoupon setCoupon={setCoupon}/>
+                <CartTotals couponCode={couponCode} appliedCoupon={appliedCoupon}/>
             </div>
-          ))}
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Cart;

@@ -2,11 +2,11 @@ const Category = require('../Models/CategoryModel')
 const Product = require('../Models/ProductModel')
 const yup = require('yup')
 
-const {object, string, array, number} = yup
+const { object, string, array, number } = yup
 
 const ProductsController = {
     create: async (req, res, next) => {
-        const {category_id, name, slug, description, price, quantity, tags, images} = req.body
+        const { category_id, name, slug, description, price, quantity, tags, images } = req.body
         try {
             const validationSchema = object({
                 category_id: string()
@@ -45,7 +45,7 @@ const ProductsController = {
 
 
             // Check Product Exists or No
-            const isExists = await Product.exists({slug})
+            const isExists = await Product.exists({ slug })
 
             if (isExists) {
                 setError('Bu slug daha öncə əlavə edilib')
@@ -74,7 +74,7 @@ const ProductsController = {
         }
     },
     getById: async (req, res, next) => {
-        const {id} = req.params
+        const { id } = req.params
         if (!id) {
             setError('İd göndərilməyib')
             return getRes(next)
@@ -121,9 +121,8 @@ const ProductsController = {
             .finally(() => getRes(next));
     },
     getByCategory: async (req, res, next) => {
-        const {category_id} = req.body
-        Product.find({category_id: category_id})
-        .populate('categories')
+        const { category_id } = req.body
+        Product.find({ category_id: category_id })
             .then(products => {
                 setSuccess(true)
                 setData({
@@ -132,13 +131,52 @@ const ProductsController = {
             })
             .catch(err => setError(err))
             .finally(() => getRes(next))
-
     },
+    filter: async (req, res, next) => {
+        const { categoryId, sortBy, priceRange } = req.body
+        let sortData = {}
+        let findData = {}
+        if (sortBy == 'newness') {
+            sortData.created_at = 1
+        } else if (sortBy == 'oldest') {
+            sortData.created_at = -1
+        } else if (sortBy == 'low_to_high') {
+            sortData.price = 1
+        } else if (sortBy == 'high_to_low') {
+            sortData.price = -1
+        }
+
+        if (categoryId) {
+            findData = { category_id: categoryId }
+        }
+        if (typeof priceRange == 'object') {
+            const price = {}
+            if (priceRange.length == 2) {
+                price.$gte = priceRange[0]
+                price.$lte = priceRange[1]
+            } else if (priceRange.length == 1) {
+                price.$gte = priceRange[0]
+            }
+            findData.price = price
+        }
+        Product
+            .find(findData)
+            .sort(sortData)
+            .then(products => {
+                setSuccess(true)
+                setData({
+                    products
+                })
+            })
+            .catch(err => setError(err))
+            .finally(() => getRes(next))
+    },
+
     delete: async (req, res, next) => {
-        const {id} = req.params
+        const { id } = req.params
 
         try {
-            const isExists = await Product.exists({_id: {$eq: id}})
+            const isExists = await Product.exists({ _id: { $eq: id } })
             if (!isExists) {
                 setError('Məhsul tapılmadı')
                 return getRes(next)
@@ -156,11 +194,11 @@ const ProductsController = {
         }
     },
     update: async (req, res, next) => {
-        const {id} = req.params
-        const {category_id, name, slug, description, price, quantity, tags, images} = req.body
+        const { id } = req.params
+        const { category_id, name, slug, description, price, quantity, tags, images } = req.body
 
         try {
-            const isExists = await Product.exists({_id: {$eq: id}})
+            const isExists = await Product.exists({ _id: { $eq: id } })
             if (!isExists) {
                 setError('Məhsul tapılmadı')
                 return getRes(next)
@@ -204,7 +242,7 @@ const ProductsController = {
 
             // Check Product Exists or No
 
-            const checkExists = await Product.exists({slug: slug, _id: {$ne: id}})
+            const checkExists = await Product.exists({ slug: slug, _id: { $ne: id } })
 
             if (checkExists) {
                 setError('Bu slug daha öncə əlavə edilib')
@@ -212,7 +250,7 @@ const ProductsController = {
             }
 
 
-            const updateProduct = await Product.findOneAndUpdate({_id: {$eq: id}}, req.body, {
+            const updateProduct = await Product.findOneAndUpdate({ _id: { $eq: id } }, req.body, {
                 new: true
             })
             const category = await Category.findById(req.body.category_id)
