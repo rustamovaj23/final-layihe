@@ -9,6 +9,7 @@ import Axios from "../../../Helpers/Axios";
 import {handleError} from "../../../Helpers/Helpers";
 import Loading from "../../../Components/Loading/Loading";
 import FirstSlide from "../../../Components/FirstSlide/FirstSlide";
+import SlideText from "../../../Components/FirstSlide/SlideText";
 
 const Home = () => {
     const [categories, setCategories] = useState([]);
@@ -46,9 +47,12 @@ const Home = () => {
 
     return (
         <div>
-            <FirstSlide/>
+            <div className="slide-container">
+                <SlideText/>
+                <FirstSlide/>
+            </div>
             {loading && <Loading/>}
-            <div className="container">
+            <div className="container category-products-container">
                 <FlowerCategories currentRoute="all" categories={categories} filter={filter} setFilter={setFilter}/>
                 {products && products.length > 0 && <Cards products={products}/>}
             </div>

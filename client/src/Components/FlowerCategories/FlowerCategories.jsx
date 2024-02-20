@@ -13,21 +13,31 @@ const FlowerCategories = ({currentRoute, categories, filter, setFilter}) => {
         e.preventDefault()
         setFilter({...filter, priceRange: priceRange})
     }
+
+    const toggleMenu = (e) => {
+        e.preventDefault()
+        const el = document.getElementById('mobile-categories')
+        el.classList.toggle("mobile-show")
+    }
+
     return (
         <div className="flower-categories">
-            <div className="links">
-                <Link className={currentRoute == "all" ? "active" : ""} to="/">
-                    ALL
-                </Link>
-                {categories.map((category, index) => (
-                    <Link
-                        key={`categoryIndex-${index}`}
-                        to={`/categories/${category.slug}`}
-                        className={currentRoute == category.slug ? "active" : ""}
-                    >
-                        {category.title}
+            <div id="mobile-categories" className="">
+                <a href="#" onClick={e => toggleMenu(e)} className="dropdown-toggle">Categories</a>
+                <div className="links">
+                    <Link className={currentRoute == "all" ? "active" : ""} to="/">
+                        ALL
                     </Link>
-                ))}
+                    {categories.map((category, index) => (
+                        <Link
+                            key={`categoryIndex-${index}`}
+                            to={`/categories/${category.slug}`}
+                            className={currentRoute == category.slug ? "active" : ""}
+                        >
+                            {category.title}
+                        </Link>
+                    ))}
+                </div>
             </div>
             <div className="filter">
                 <div className="dropdown">

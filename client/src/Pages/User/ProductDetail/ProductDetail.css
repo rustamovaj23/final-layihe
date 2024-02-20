@@ -13,7 +13,7 @@
     gap: 50px;
 }
 
-.product-detail-page .product-info .product-images .left {
+.product-detail-page .product-info .product-images .left .lg-react-element {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -135,4 +135,150 @@
 
 .product-detail-page .product-detail .quantity .right button:hover {
     color: #f34f3f
+}
+
+.product-detail-page .product-tabs .nav-tabs .container {
+    display: flex;
+}
+
+.product-detail-page .product-tabs .nav-tabs button {
+    border-radius: 0;
+    border: 1px solid #eee;
+    border-bottom: none;
+    color: rgb(27, 27, 27);
+    font-size: 12px;
+    background: transparent;
+    min-width: 200px;
+    width: fit-content;
+    height: 50px;
+    transition: 150ms ease;
+}
+
+.product-detail-page .product-tabs .nav-tabs button.active {
+    background: #F34F3F;
+    color: #fff
+}
+
+.product-detail-page .product-tabs h3 {
+    color: rgb(43, 43, 43);
+    font-size: 30px;
+    font-weight: 400;
+    margin: 25px 0 !important;
+}
+
+.product-detail-page .product-tabs #product-description .description {
+    color: rgb(109, 106, 106);
+    text-align: justify;
+    font-size: 15px;
+}
+
+.product-detail-page .product-tabs #product-information ul {
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.product-detail-page .product-tabs #product-information ul li {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.product-detail-page .product-tabs #product-information ul li span {
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.product-detail-page .product-tabs #product-information ul li .key {
+    font-weight: 700;
+    color: rgb(43, 43, 43);
+    width: 100px;
+}
+
+.product-detail-page .product-tabs #product-information ul li .value {
+    color: rgb(139, 139, 139);
+}
+
+.product-detail-page .product-tabs #product-reviews .reviews {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-detail-page .product-tabs #product-reviews .review {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: fit-content;
+}
+
+.product-detail-page .product-tabs #product-reviews .user-image img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+
+.product-detail-page .product-tabs .review-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.product-detail-page .product-tabs .review-content .top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.product-detail-page .product-tabs .review-content .username {
+    font-size: 12px;
+    color: rgb(27, 27, 27);
+    font-weight: 500;
+}
+
+.product-detail-page .product-tabs .review-content .created_at {
+    font-size: 10px;
+    color: rgb(175, 175, 175);
+    font-weight: 500;
+}
+
+.product-detail-page .product-tabs .review-content .bottom .text {
+    font-size: 15px;
+    color: rgb(109, 106, 106);
+    line-height: 24px;
+}
+
+.product-detail-page .product-tabs .review-form label, .product-detail-page .product-tabs .review-form span {
+    color: rgb(109, 106, 106);
+    font-size: 15px;
+}
+
+.product-detail-page .product-tabs .review-form textarea {
+    min-height: 150px;
+    border-radius: 0;
+}
+
+.product-detail-page .product-tabs .review-form .form-control {
+    border-radius: 0;
+    height: 60px;
+}
+
+.product-detail-page .product-tabs .review-form button {
+    border-radius: 0;
+    background: #F34F3F;
+    width: 150px;
+    height: 50px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-detail-page hr {
+    width: 100%;
+    border-color: #ccc;
+}
+
+.product-detail-page .related-products h5 {
+    font-size: 12px;
+    color: rgb(27, 27, 27);
+    font-weight: 500;
 }

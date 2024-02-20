@@ -11,7 +11,19 @@
     padding-top: 40px;
 }
 
-.flower-categories .links a {
+.flower-categories .links {
+    transition: 300ms ease-in-out height, 300ms ease-in-out visibility;
+}
+
+#mobile-categories > a {
+    display: none;
+}
+
+.flower-categories .links a, #mobile-categories > a {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
     margin-right: 10px; /* Bağlantılar arasında 10px boşluk bırak */
     color: #1b1b1b; /* Bağlantı rengini siyah yap */
     text-decoration: none; /* Bağlantı altı çizgisini kaldır */
@@ -19,6 +31,15 @@
 
 .flower-categories .links a:hover, .flower-categories .links a.active {
     color: #f34f3f; /* Bağlantı rengini gri yap hover durumunda */
+}
+
+.flower-categories .filter a.dropdown-toggle {
+    font-weight: 500;
+    font-size: 12px !important;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #1b1b1b; /* Bağlantı rengini siyah yap */
+    text-decoration: none; /* Bağlantı altı çizgisini kaldır */
 }
 
 .flower-categories .filter ul.dropdown-menu {
@@ -31,11 +52,6 @@
 
 .flower-categories .filter ul.dropdown-menu.show {
     display: grid;
-}
-
-.flower-categories .filter a.dropdown-toggle {
-    font-size: 14px;
-    color: rgb(27, 27, 27);
 }
 
 .flower-categories .filter ul.dropdown-menu ul li.heading {
@@ -56,4 +72,41 @@
 
 .flower-categories .filter ul.dropdown-menu ul li a:hover {
     font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+    .flower-categories {
+        align-items: flex-start;
+    }
+
+    #mobile-categories > a {
+        display: inline-block;
+    }
+
+    #mobile-categories .links {
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #mobile-categories.mobile-show .links {
+        height: 180px;
+        max-height: 250px;
+        display: flex;
+        flex-direction: column;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #mobile-categories {
+        flex: 1;
+        max-width: 250px;
+    }
+
+    .filter {
+        width: 60px;
+    }
 }

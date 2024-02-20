@@ -10,6 +10,7 @@ import {handleError} from "../../../Helpers/Helpers";
 import Loading from "../../../Components/Loading/Loading";
 import {useParams} from "react-router";
 import FirstSlide from "../../../Components/FirstSlide/FirstSlide";
+import SlideText from "../../../Components/FirstSlide/SlideText";
 
 const Categories = () => {
     const [categories, setCategories] = useState([]);
@@ -64,8 +65,10 @@ const Categories = () => {
 
     return (
         <div>
-            <FirstSlide/>
-
+            <div className="slide-container">
+                <SlideText/>
+                <FirstSlide/>
+            </div>
             {loading && <Loading/>}
             <div className="container">
                 <FlowerCategories currentRoute={slug} categories={categories} filter={filter} setFilter={setFilter}/>

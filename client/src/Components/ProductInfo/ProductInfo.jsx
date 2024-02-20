@@ -2,14 +2,14 @@ import React from 'react'
 import ProductImages from './ProductImages'
 import ProductDetail from './ProductDetail'
 
-const ProductInfo = () => {
+const ProductInfo = ({product}) => {
     return (
         <div className="product-info">
             <div className="left">
-                <ProductImages/>
+                <ProductImages images={product.images}/>
             </div>
             <div className="right">
-                <ProductDetail/>
+                <ProductDetail product={product}/>
             </div>
         </div>
     )

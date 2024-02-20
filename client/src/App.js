@@ -49,10 +49,10 @@ function App() {
         }
     }
 
-    const AddtoBasket = (product) => {
+    const AddtoBasket = (product, count = 1) => {
         const target = basket.find(item => item.product._id == product._id);
         if (target) {
-            target.count += 1;
+            target.count += count;
             target.totalPrice = product.price * target.count;
             setbasket([...basket]);
             localStorage.setItem("BasketItem", JSON.stringify([...basket]));
@@ -61,12 +61,12 @@ function App() {
             const BasketProduct = {
                 id: product._id,
                 product: product,
-                count: 1,
+                count: count,
                 totalPrice: product.price
             };
             setbasket([...basket, BasketProduct]);
             localStorage.setItem("BasketItem", JSON.stringify([...basket, BasketProduct]));
-            handleSuccess('Səbətə əlavə edildi')
+            handleSuccess('Səbətə əlavə edildi 2')
         }
     };
 

@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product-list {
+    row-gap: 15px;
+}
+
+
+.product-list .product .card {
+    width: 100%;
+    border: none;
+}
+
+.card-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-text a {
+    transition: color .2s ease-out;
+    fontFamily: Montserrat;
+    cursor: pointer;
+}
+
+.product-list .card-photo {
+    width: 100%;
+}
+
+.product-list .card-photo img {
+    transition: transform 0.3s;
+    cursor: pointer;
+    width: 295px;
+    height: 380px;
+}
+
+.card-photo img:hover {
+    transform: scale(1.1);
+}
+
+.product-list .product .product-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(27, 27, 27);
+}
+
+.product-list .product .product-price {
+    color: #666;
+    font-size: 13px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .product-list .card-photo img {
+        width: 245px;
+        height: 316px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .product-list .card-photo img {
+        width: 207px;
+        height: 267px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .product-list .card-photo img {
+        width: 210px;
+        height: 295px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .category-products-container, .category-products-container .container {
+        max-width: 600px;
+    }
+
+    .product-list .card-photo img {
+        width: 260px;
+        height: 341px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .product-list {
+        row-gap: 20px;
+    }
+
+    .category-products-container, .category-products-container .container {
+        max-width: 600px;
+    }
+
+    .product-list .card-photo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .product-list .card-photo img {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        max-height: 500px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .product-list .card-photo img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        max-height: 380px;
+    }
+}

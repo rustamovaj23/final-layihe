@@ -1,32 +1,43 @@
 import React from 'react'
+import LightGallery from 'lightgallery/react';
+import lgZoom from 'lightgallery/plugins/zoom'
+import lgFullScreen from 'lightgallery/plugins/fullscreen'
 
-const ProductImages = () => {
+
+// import styles
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
+
+const ProductImages = ({images}) => {
+
+    const onInit = (e) => {
+
+    }
+
     return (
         <div className="product-images">
             <div className="left">
-                <a href="#">
-                    <img
-                        src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-14-gallery-4-300x400.jpg"
-                        alt=""/>
-                </a>
-                <a href="#">
-                    <img
-                        src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-14-gallery-3-300x400.jpg"
-                        alt=""/>
-                </a>
-                <a href="#">
-                    <img
-                        src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-14-gallery-2-300x400.jpg"
-                        alt=""/>
-                </a>
-                <a href="#">
-                    <img
-                        src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-14-gallery-1-300x400.jpg"
-                        alt=""/>
-                </a>
+                <LightGallery
+                    onInit={onInit}
+                    speed={500}
+                    plugins={[lgZoom, lgFullScreen]}
+                >
+                    {
+                        images.map((image, index) => <a key={`image_index_${index}`}
+                                                        data-src={image.url}
+                                                        className="gallery-item"
+                                                        href={image.url}>
+                                <img
+                                    src={image.url}
+                                    alt=""/>
+                            </a>
+                        )
+                    }
+                </LightGallery>
             </div>
             <div className="right">
-                <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-14-img.jpg" alt=""/>
+                <img src={images[0].url} alt=""/>
             </div>
         </div>
     )
