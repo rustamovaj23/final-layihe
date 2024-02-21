@@ -10,6 +10,7 @@ import {handleError} from "../../../Helpers/Helpers";
 import Loading from "../../../Components/Loading/Loading";
 import FirstSlide from "../../../Components/FirstSlide/FirstSlide";
 import SlideText from "../../../Components/FirstSlide/SlideText";
+import OurBlog from "../../../Components/OurBlog/OurBlog";
 
 const Home = () => {
     const [categories, setCategories] = useState([]);
@@ -44,6 +45,7 @@ const Home = () => {
             .finally(() => setLoading(false))
     }, [filter])
 
+    const surpriseText = 'Where flowers are our inspiration to create lasting memories. Whatever the occasion, our flowers will make it special cursus a sit amet mauris.'
 
     return (
         <div>
@@ -56,9 +58,10 @@ const Home = () => {
                 <FlowerCategories currentRoute="all" categories={categories} filter={filter} setFilter={setFilter}/>
                 {products && products.length > 0 && <Cards products={products}/>}
             </div>
-            <Surprise/>
+            <Surprise text={surpriseText}/>
             <FlowerExperts/>
             <FlowerExpertsPhotos/>
+            <OurBlog/>
             <Slide/>
         </div>
     );

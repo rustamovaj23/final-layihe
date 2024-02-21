@@ -63,6 +63,9 @@ const Categories = () => {
         }
     };
 
+    const surpriseText = 'Where flowers are our inspiration to create lasting memories. Whatever the occasion, our flowers will make it special cursus a sit amet mauris.'
+
+
     return (
         <div>
             <div className="slide-container">
@@ -74,7 +77,7 @@ const Categories = () => {
                 <FlowerCategories currentRoute={slug} categories={categories} filter={filter} setFilter={setFilter}/>
                 {products && products.length > 0 && <Cards products={products}/>}
             </div>
-            <Surprise/>
+            <Surprise surpriseText={surpriseText}/>
             <FlowerExperts/>
             <FlowerExpertsPhotos/>
             <Slide/>

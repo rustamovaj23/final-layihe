@@ -1,0 +1,108 @@
+.home-blog-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: #F8F8F8;
+    padding: 60px 0;
+}
+
+.home-blog-container .top {
+    text-align: center;
+}
+
+.home-blog-container .top h3 {
+    color: rgb(43, 43, 43);
+    font-size: 38px;
+    line-height: 55px;
+    font-weight: 500;
+    font-family: "Playfair Display";
+}
+
+.home-blog-container .posts {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.home-blog-container .post {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.home-blog-container a.post-image {
+    position: relative;
+}
+
+.home-blog-container a.post-image .date {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 32px;
+    background: #fff;
+    font-size: 10px;
+    line-height: 10px;
+    display: grid;
+    place-items: center;
+    color: #333;
+    font-weight: 500;
+}
+
+.home-blog-container a.post-image img {
+    width: 100%;
+    height: 280px;
+}
+
+.home-blog-container .post h5 {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    font-family: "Playfair Display";
+    margin-top: 10px;
+}
+
+.home-blog-container .post h5 a {
+    color: rgb(43, 43, 43);
+    font-weight: 400;
+}
+
+.home-blog-container .post p {
+    color: rgb(109, 106, 106);
+    line-height: 24px;
+    font-size: 15px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .home-blog-container a.post-image img {
+        height: 193px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .home-blog-container a.post-image img {
+        height: 154px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .home-blog-container .posts {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .home-blog-container a.post-image img {
+        height: 185px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .home-blog-container .posts {
+        grid-template-columns: 1fr;
+    }
+
+    .home-blog-container a.post-image img {
+        height: 268px;
+    }
+}
