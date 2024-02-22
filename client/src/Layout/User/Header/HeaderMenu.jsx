@@ -38,30 +38,41 @@ const HeaderMenu = () => {
                                 </Link>
                             </li>
                             <li>
+                                <Link to="/faqPage" className="dropdown-item">
+                                    FAQ Page
+                                </Link>
+                            </li>
+                            <li>
                                 <Link to="/contactUs" className="dropdown-item">
                                     Contact us
                                 </Link>
                             </li>
+                        </ul>
+                    </li>
+                    <li className="dropdown">
+                        <a
+                            href="#"
+                            className="dropdown-toggle"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            <div className="headText">
+                                <span className="headTextInside">Shop</span>
+                            </div>
+                        </a>
+                        <ul className="dropdown-menu">
                             <li>
                                 <Link to="/myAccount" className="dropdown-item">
                                     My account
                                 </Link>
                             </li>
+                            <li>
+                                <Link to="/portfolio" className="dropdown-item">
+                                    Portfolio
+                                </Link>
+                            </li>
                         </ul>
-                    </li>
-                    <li>
-                        <Link to={"/"}>
-                            <div className="headText">
-                                <span className="headTextInside">Shop</span>
-                            </div>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to={"/portfolio"}>
-                            <div className="headText">
-                                <span className="headTextInside">Portfolio</span>
-                            </div>
-                        </Link>
                     </li>
                     <li className="dropdown">
                         <a

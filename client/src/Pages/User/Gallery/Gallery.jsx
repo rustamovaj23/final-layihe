@@ -4,12 +4,12 @@ import PortfolioGallery from '../../../Components/PortfolioGallery/PortfolioGall
 import Pictures from '../../../Components/Pictures/Pictures'
 
 const Gallery = () => {
-  return (
-    <div>
-      <PortfolioGallery/>
-      <Pictures/>
-    </div>
-  )
+    return (
+        <div>
+            <PortfolioGallery/>
+            <Pictures/>
+        </div>
+    )
 }
 
 export default Gallery

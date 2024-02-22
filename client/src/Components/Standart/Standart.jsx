@@ -2,11 +2,13 @@ import React from 'react'
 import "./Standart.css"
 
 const Standart = () => {
-  return (
-    <div className='standart'>
-        <p style={{"fontSize":"50px", "fontFamily": "Playfair Display"}}>Portfolio Standard</p>
-    </div>
-  )
+    return (
+        <div className='standart'>
+            <div className="container">
+                <p>Portfolio Standard</p>
+            </div>
+        </div>
+    )
 }
 
 export default Standart

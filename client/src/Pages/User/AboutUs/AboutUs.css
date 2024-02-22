@@ -27,30 +27,11 @@
         flex-direction: column-reverse;
         row-gap: 15px;
     }
-
-    .about-us .about-us-img img {
-        object-fit: cover;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .about-us .about-us-img img {
-        height: 300px;
-    }
 }
 
 @media only screen and (max-width: 576px) {
     .about-us-container .all-video-text .container {
         row-gap: 30px;
-    }
-
-    .about-us .about-us-img img {
-        width: 100%;
-        height: auto;
-    }
-
-    .about-us .top-text p:first-child {
-        font-size: 36px;
     }
 
     .about-us-container .about-experts {

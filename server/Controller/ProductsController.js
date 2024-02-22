@@ -2,11 +2,11 @@ const Category = require('../Models/CategoryModel')
 const Product = require('../Models/ProductModel')
 const yup = require('yup')
 
-const { object, string, array, number } = yup
+const {object, string, array, number} = yup
 
 const ProductsController = {
     create: async (req, res, next) => {
-        const { category_id, name, slug, description, price, quantity, tags, images } = req.body
+        const {category_id, name, slug, description, price, quantity, tags, images} = req.body
         try {
             const validationSchema = object({
                 category_id: string()
@@ -45,7 +45,7 @@ const ProductsController = {
 
 
             // Check Product Exists or No
-            const isExists = await Product.exists({ slug })
+            const isExists = await Product.exists({slug})
 
             if (isExists) {
                 setError('Bu slug daha öncə əlavə edilib')
@@ -74,7 +74,7 @@ const ProductsController = {
         }
     },
     getById: async (req, res, next) => {
-        const { id } = req.params
+        const {id} = req.params
         if (!id) {
             setError('İd göndərilməyib')
             return getRes(next)
@@ -121,22 +121,37 @@ const ProductsController = {
             .finally(() => getRes(next));
     },
     getByCategory: async (req, res, next) => {
-        const { category_id } = req.body
-        Product.find({ category_id: category_id })
+        let categoryObject = {}
+        const {category_id, perPage} = req.body
+        if (category_id) {
+            categoryObject = {category_id}
+        }
+        const page = parseInt(req.body.page) || 1; // Sayfa numarasını al, eğer belirtilmemişse varsayılan olarak ilk sayfayı göster
+         //perPage -  Her sayfada kaç ürün gösterileceği
+        const skip = (page - 1) * perPage; // Kaç ürünü atlayacağımızı hesapla
+
+        const totalProduct = await Product.find(categoryObject)
+            .count('total')
+
+        Product
+            .find(categoryObject)
+            .skip(skip)
+            .limit(perPage)
             .then(products => {
                 setSuccess(true)
                 setData({
-                    products
+                    products,
+                    total: totalProduct
                 })
             })
             .catch(err => setError(err))
             .finally(() => getRes(next))
     },
     getBySlug: async (req, res, next) => {
-        const { slug } = req.params
+        const {slug} = req.params
         Product
             .aggregate([
-                { $match: { slug: req.params.slug } }, // Ürünü slug'a göre eşleştir
+                {$match: {slug: req.params.slug}}, // Ürünü slug'a göre eşleştir
                 {
                     $lookup: {
                         from: 'categories', // Kategoriler koleksiyonu adı
@@ -148,7 +163,7 @@ const ProductsController = {
                 {
                     $unwind: '$category' // Dizi içindeki kategorileri ayırır
                 },
-                { $limit: 1 }
+                {$limit: 1}
             ])
             .then(products => {
                 setSuccess(true)
@@ -160,16 +175,16 @@ const ProductsController = {
             .finally(() => getRes(next))
     },
     getRelatedProducts: async (req, res, next) => {
-        const { slug } = req.params
+        const {slug} = req.params
 
         try {
-            const getProduct = await Product.findOne({ slug: slug })
+            const getProduct = await Product.findOne({slug: slug})
 
             if (getProduct) {
 
                 Product
                     .aggregate([
-                        { $match: { slug: { $ne: slug }, category_id: getProduct.category_id } }, // Verilen slug ile eşleşmeyen ve category_id`ye göre eşleşen ürünleri filtrele
+                        {$match: {slug: {$ne: slug}, category_id: getProduct.category_id}}, // Verilen slug ile eşleşmeyen ve category_id`ye göre eşleşen ürünleri filtrele
                         {
                             $lookup: {
                                 from: 'categories', // Kategoriler koleksiyonu adı
@@ -195,14 +210,13 @@ const ProductsController = {
                 return getRes(next)
             }
 
-        }
-        catch (err) {
+        } catch (err) {
             setError(err)
             return getRes(next)
         }
     },
     filter: async (req, res, next) => {
-        const { categoryId, sortBy, priceRange } = req.body
+        const {categoryId, sortBy, priceRange} = req.body
         let sortData = {}
         let findData = {}
         if (sortBy == 'newness') {
@@ -216,7 +230,7 @@ const ProductsController = {
         }
 
         if (categoryId) {
-            findData = { category_id: categoryId }
+            findData = {category_id: categoryId}
         }
         if (typeof priceRange == 'object') {
             const price = {}
@@ -242,10 +256,10 @@ const ProductsController = {
     },
 
     delete: async (req, res, next) => {
-        const { id } = req.params
+        const {id} = req.params
 
         try {
-            const isExists = await Product.exists({ _id: { $eq: id } })
+            const isExists = await Product.exists({_id: {$eq: id}})
             if (!isExists) {
                 setError('Məhsul tapılmadı')
                 return getRes(next)
@@ -263,11 +277,11 @@ const ProductsController = {
         }
     },
     update: async (req, res, next) => {
-        const { id } = req.params
-        const { category_id, name, slug, description, price, quantity, tags, images } = req.body
+        const {id} = req.params
+        const {category_id, name, slug, description, price, quantity, tags, images} = req.body
 
         try {
-            const isExists = await Product.exists({ _id: { $eq: id } })
+            const isExists = await Product.exists({_id: {$eq: id}})
             if (!isExists) {
                 setError('Məhsul tapılmadı')
                 return getRes(next)
@@ -311,7 +325,7 @@ const ProductsController = {
 
             // Check Product Exists or No
 
-            const checkExists = await Product.exists({ slug: slug, _id: { $ne: id } })
+            const checkExists = await Product.exists({slug: slug, _id: {$ne: id}})
 
             if (checkExists) {
                 setError('Bu slug daha öncə əlavə edilib')
@@ -319,7 +333,7 @@ const ProductsController = {
             }
 
 
-            const updateProduct = await Product.findOneAndUpdate({ _id: { $eq: id } }, req.body, {
+            const updateProduct = await Product.findOneAndUpdate({_id: {$eq: id}}, req.body, {
                 new: true
             })
             const category = await Category.findById(req.body.category_id)

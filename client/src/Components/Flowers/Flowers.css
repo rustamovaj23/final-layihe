@@ -1,25 +1,30 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.flowers{
-    padding-top: 40px;
+.flowers {
     display: flex;
     flex-direction: column;
-    gap: 40px;
 }
-.top-mid-bot{
+
+.top-mid-bot {
     display: flex;
     gap: 30px;
 }
-.six-flowers{
+
+.six-flowers {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.flw-txt{
+
+.flw-txt {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.portfolio-standart {
+    margin-top: 20px;
+}
+
+.portfolio-standart .top-mid-bot {
+    /*margin-top: 20px;*/
+    padding-top: 0;
 }

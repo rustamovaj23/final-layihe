@@ -1,26 +1,42 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.top-mid-bot{
+
+.picture {
+    margin-top: 80px;
+}
+
+.gallery-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.top-mid-bot {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 150px;
 }
-.flw-img1 {
+
+.six-flowers {
+    width: 100%;
+    height: 538px;
+}
+
+.gallery-items img {
+    width: 100%;
+    height: 538px;
+}
+
+.flw-img1, .flw-img2, .flw-img3, .flw-img4, .flw-img5, .flw-img6, .flw-img7, .flw-img8, .flw-img9 {
     position: relative;
-    width: 350px;
-    height: 400px;
-  }
-  
-  .flw-img1 img {
     width: 100%;
     height: 100%;
-  }
-  
-  .flw-img1::after {
+}
+
+.flw-img1::after {
     content: "FLOWER POWER"; /* Görüntülenmesini istediğiniz metni buraya yazın */
     position: absolute;
     top: 0;
@@ -34,23 +50,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .flw-img1:hover::after {
+}
+
+.flw-img1:hover::after {
     opacity: 5; /* Hover olduğunda metni görünür yapın */
-  }
-  .flw-img2 {
-    position: relative;
-    width: 350px;
-    height: 400px;
-  }
-  
-  .flw-img2 img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .flw-img2::after {
+}
+
+.flw-img2::after {
     content: "FLORISTY SHOPS"; /* Görüntülenmesini istediğiniz metni buraya yazın */
     position: absolute;
     top: 0;
@@ -64,23 +70,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .flw-img2:hover::after {
+}
+
+.flw-img2:hover::after {
     opacity: 5; /* Hover olduğunda metni görünür yapın */
-  }
-  .flw-img3 {
-    position: relative;
-    width: 350px;
-    height: 400px;
-  }
-  
-  .flw-img3 img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .flw-img3::after {
+}
+
+.flw-img3::after {
     content: "ENGLISH GARDEN"; /* Görüntülenmesini istediğiniz metni buraya yazın */
     position: absolute;
     top: 0;
@@ -94,23 +90,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .flw-img3:hover::after {
+}
+
+.flw-img3:hover::after {
     opacity: 5; /* Hover olduğunda metni görünür yapın */
-  }
-  .flw-img4 {
-    position: relative;
-    width: 350px;
-    height: 400px;
-  }
-  
-  .flw-img4 img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .flw-img4::after {
+}
+
+.flw-img4::after {
     content: "FLORICULTURE"; /* Görüntülenmesini istediğiniz metni buraya yazın */
     position: absolute;
     top: 0;
@@ -124,23 +110,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .flw-img4:hover::after {
+}
+
+.flw-img4:hover::after {
     opacity: 5; /* Hover olduğunda metni görünür yapın */
-  }
-  .flw-img5 {
-    position: relative;
-    width: 350px;
-    height: 400px;
-  }
-  
-  .flw-img5 img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .flw-img5::after {
+}
+
+.flw-img5::after {
     content: "MEANING"; /* Görüntülenmesini istediğiniz metni buraya yazın */
     position: absolute;
     top: 0;
@@ -154,23 +130,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .flw-img5:hover::after {
+}
+
+.flw-img5:hover::after {
     opacity: 5; /* Hover olduğunda metni görünür yapın */
-  }
-  .flw-img6 {
-    position: relative;
-    width: 350px;
-    height: 400px;
-  }
-  
-  .flw-img6 img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .flw-img6::after {
+}
+
+.flw-img6::after {
     content: "DUTCH STYLE"; /* Görüntülenmesini istediğiniz metni buraya yazın */
     position: absolute;
     top: 0;
@@ -184,23 +150,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .flw-img6:hover::after {
+}
+
+.flw-img6:hover::after {
     opacity: 5; /* Hover olduğunda metni görünür yapın */
-  }
-  .flw-img7 {
-    position: relative;
-    width: 350px;
-    height: 400px;
-  }
-  
-  .flw-img7 img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .flw-img7::after {
+}
+
+.flw-img7::after {
     content: "DRIED ROSES"; /* Görüntülenmesini istediğiniz metni buraya yazın */
     position: absolute;
     top: 0;
@@ -214,23 +170,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .flw-img7:hover::after {
+}
+
+.flw-img7:hover::after {
     opacity: 5; /* Hover olduğunda metni görünür yapın */
-  }
-  .flw-img8 {
-    position: relative;
-    width: 350px;
-    height: 400px;
-  }
-  
-  .flw-img8 img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .flw-img8::after {
+}
+
+.flw-img8::after {
     content: "FLOWER EXPERTS"; /* Görüntülenmesini istediğiniz metni buraya yazın */
     position: absolute;
     top: 0;
@@ -244,23 +190,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .flw-img8:hover::after {
+}
+
+.flw-img8:hover::after {
     opacity: 5; /* Hover olduğunda metni görünür yapın */
-  }
-  .flw-img9 {
-    position: relative;
-    width: 350px;
-    height: 400px;
-  }
-  
-  .flw-img9 img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .flw-img9::after {
+}
+
+.flw-img9::after {
     content: "IKEBANA"; /* Görüntülenmesini istediğiniz metni buraya yazın */
     position: absolute;
     top: 0;
@@ -274,9 +210,58 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .flw-img9:hover::after {
+}
+
+.flw-img9:hover::after {
     opacity: 5; /* Hover olduğunda metni görünür yapın */
-  }
-  
+}
+
+@media only screen and (max-width: 1400px) {
+    .six-flowers, .gallery-items img {
+        height: 450px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .six-flowers, .gallery-items img {
+        height: 386px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .six-flowers, .gallery-items img {
+        height: 307px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .gallery-items {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .six-flowers, .gallery-items img {
+        height: 371px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .gallery-items {
+        grid-template-columns: 1fr;
+    }
+
+    .six-flowers, .gallery-items img {
+        height: 576px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .six-flowers, .gallery-items img {
+        height: 546px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .six-flowers, .gallery-items img {
+        height: 390px;
+    }
+}
