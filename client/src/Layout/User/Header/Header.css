@@ -99,6 +99,10 @@
     width: 100%;
 }
 
+.header li#cart-link {
+    padding: 0 15px;
+}
+
 .header li#cart-link svg {
     width: 24px;
     height: 24px;
@@ -183,6 +187,65 @@
     display: none;
 }
 
+.header li.search {
+    width: 24px;
+}
+
+.header li.search a {
+    padding: 0 10px !important;
+}
+
+.header li.search svg {
+    width: 24px;
+    height: 24px;
+}
+
+.header li.search .dropdown-menu {
+    width: 300px;
+    height: 60px;
+    align-items: center;
+    border: none;
+}
+
+.header li.search.show .dropdown-menu {
+    display: flex;
+}
+
+.header li.search form {
+    width: 300px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.header li.search input {
+    flex: 1;
+    height: 44px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.header li.search button {
+    background: transparent;
+    color: #b5b5b5;
+    width: 40px;
+    height: 44px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header li.search button svg {
+    width: 24px !important;
+    height: 24px;
+}
+
 @media only screen and (max-width: 991px) {
     .toggle-right-menu {
         display: inline-block;
@@ -253,6 +316,9 @@
         left: 60px !important;
     }
 
+    .headerLinks li.search {
+        display: none !important;
+    }
 
     .offcanvas img {
         width: 200px;

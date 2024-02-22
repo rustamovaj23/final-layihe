@@ -19,6 +19,7 @@ import MyAccount from "../Pages/User/MyAccount/MyAccount";
 import Quote from "../Pages/User/Quote/Quote";
 import Videos from "../Pages/User/Videos/Videos";
 import ProductDetail from "../Pages/User/ProductDetail/ProductDetail"
+import Search from "../Pages/User/Search/Search";
 
 
 const ROUTER = [
@@ -85,6 +86,10 @@ const ROUTER = [
             {
                 path: "/portfolio",
                 element: <Portfolio/>
+            },
+            {
+                path: "/search",
+                element: <Search/>
             }
         ]
     },

@@ -39,7 +39,8 @@
     height: 50px;
     border: 1px solid #eee;
     padding: 0 15px;
-    width: 260px;
+    width: 100%;
+    max-width: 250px;
     color: #999;
     font-size: 14px;
 }
@@ -101,6 +102,7 @@
     border: 1px solid #eee;
     border-right: none;
     padding: 0 15px;
+    height: 50px;
 }
 
 .cart-coupon .left form button {
@@ -150,4 +152,49 @@
 .cart-totals .total-price {
     font-weight: 700;
     color: #666
+}
+
+@media only screen and (max-width: 768px) {
+    .cart-products .quantity {
+        border: none;
+        padding: 0 10px;
+        max-width: 100%;
+    }
+
+    .cart-products .quantity .left {
+        display: none;
+    }
+
+    .cart-coupon {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cart-coupon .left, .cart-coupon .right {
+        width: 100%;
+    }
+
+    .cart-coupon .left form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .cart-coupon .left input {
+        border-right: 1px solid #eee;
+    }
+
+    .cart-coupon button, .cart-coupon input {
+        width: 100%;
+    }
+
+    .total-table th {
+        min-width: 120px;
+    }
+
+    .cart-totals a.checkout-link {
+        width: 100%;
+    }
+
 }

@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import {Link} from "react-router-dom";
 import dataContext from "../../../Context/Context";
 
@@ -6,7 +6,13 @@ const HeaderMenu = () => {
     const {basket} =
         useContext(dataContext);
 
+    const [searchQuery, setSearchQuery] = useState('')
+
     const productCount = basket.length
+
+    const search = (e) => {
+        e.preventDefault()
+    }
 
     return (
         <div className="headerLinks">
@@ -118,6 +124,36 @@ const HeaderMenu = () => {
                                 </Link>
                             </li>
                         </ul>
+                    </li>
+                    <li className="dropdown search">
+                        <a
+                            href="#"
+                            className="dropdown-toggle"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            <div className="headText">
+                                <span className="headTextInside">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path
+                                        fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
+                                        strokeWidth="2" d="m5 27l7.5-7.5M28 13a9 9 0 1 1-18 0a9 9 0 0 1 18 0"/></svg>
+                                </span>
+                            </div>
+                        </a>
+                        <div className="dropdown-menu">
+                            <form onSubmit={e => search(e)}>
+                                <input type="text" placeholder="Search" onChange={e => setSearchQuery(e.target.value)}/>
+                                <button type="submit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                        <path
+                                            fill="none" stroke="currentColor" strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2" d="m5 27l7.5-7.5M28 13a9 9 0 1 1-18 0a9 9 0 0 1 18 0"/>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
                     </li>
                     <li id="cart-link">
                         <Link to={"/cart"} className="position-relative">

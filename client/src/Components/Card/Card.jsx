@@ -5,6 +5,11 @@ import {Link} from 'react-router-dom'
 const Card = ({product}) => {
     const {AddtoBasket} = useContext(dataContext);
 
+    const addToBasket = (e, product) => {
+        e.preventDefault()
+        AddtoBasket(product)
+    }
+
     return (
         <div className="col-lg-3 col-md-4 col-sm-6 col-12 product">
             <Link to={`/product/${product.slug}`} className="card">
@@ -13,15 +18,13 @@ const Card = ({product}) => {
                 </div>
                 <div className="card-text">
                     <p className="product-name">{product.name}</p>
-                    <p className="product-price" style={{color: "#6d6a6a"}}>${product.price}</p>
-                    <button
-                        onClick={() => {
-                            AddtoBasket(product);
-                        }}
-                    >
-                        {" "}
-                        Səbətə at
-                    </button>
+                    <div className="product-price-add-to-cart">
+                        <p className="product-price">${product.price}</p>
+                        <button
+                            onClick={e => addToBasket(e, product)}>
+                            Səbətə at
+                        </button>
+                    </div>
                 </div>
             </Link>
         </div>
