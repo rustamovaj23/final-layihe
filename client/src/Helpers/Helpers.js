@@ -25,19 +25,14 @@ export function handleError(err) {
     let message = ''
     if (typeof err == 'string') {
         message = err
-        console.log('err_str', err)
     } else {
-        console.log('err_full', err?.response?.data)
-        if (err?.response?.data?.errors) {
-            const errors = err.response.data.errors
-            let i = 0
-            each(errors, (error) => {
-                i++
-                message += '<br>' + i + ') ' + error[0]
-            })
+        if (err?.response?.data?.message?.message) {
+            message = err?.response?.data?.message.message
         } else {
             message = err?.response?.data?.message
         }
     }
+
+    console.log('err_full', err)
     Error(message)
 }

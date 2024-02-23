@@ -1,37 +1,136 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.right-side-text-one{
+
+.right-side-text-one {
     display: flex;
 }
-.right-side-text-two{
+
+.right-side-text-two {
     display: flex;
 }
-.right-side-text-three{
+
+.right-side-text-three {
     display: flex;
 }
-.right-side-text-top{
+
+.right-side-text-top {
     display: flex;
     flex-direction: column;
 }
-.right-side-text-bottom{
+
+.right-side-text-top p {
+    font-size: 40px;
+    line-height: 55px;
+    font-family: "Playfair Display";
+    margin: 0;
+}
+
+.right-side-text-top p span {
+    color: red;
+}
+
+.right-side-text-bottom {
     display: flex;
     vertical-align: middle;
     gap: 5px;
 }
-.all-video-text{
+
+.all-video-text {
+    background-color: #f6f9fa;;
+    padding: 100px 0;
+    margin-top: 100px;
+}
+
+.all-video-text .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 90px;
-    height: 600px;
-    background-color: #f6f9fa;;
-    margin-top: 100px;
+    column-gap: 90px;
 }
-.middle-bottom{
+
+.right-side-video {
+    width: 50%;
+}
+
+.left-side-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.middle-bottom {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.middle-bottom p {
+    color: gray;
+    font-size: 20px;
+    line-height: 29px;
+    font-family: "Playfair Display";
+}
+
+.middle-bottom .one-two-three img {
+    width: 19px;
+    height: 20px;
+}
+
+.right-side-video video {
+    width: 100%;
+    min-width: 475px;
+    height: 420px;
+}
+
+.left-side-text .bottom-image {
+    display: none;
+    width: 200px;
+    height: 56px;
+}
+
+@media only screen and (max-width: 991px) {
+    .all-video-text .container {
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 50px;
+    }
+
+    .right-side-video {
+        width: 100%;
+    }
+
+    .right-side-video video {
+        width: 100%;
+        min-width: auto;
+        height: 380px;
+    }
+
+    .left-side-text {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .right-side-text-top p {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+    .all-video-text {
+        padding: 50px 0;
+    }
+
+    .right-side-video video {
+        height: 270px;
+    }
+
+    .right-side-text-top p {
+        font-size: 30px;
+        line-height: 40px;
+    }
 }

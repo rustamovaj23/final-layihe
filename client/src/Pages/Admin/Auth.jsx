@@ -6,7 +6,7 @@ import {handleError, handleSuccess} from '../../Helpers/Helpers'
 
 const Auth = () => {
     const [loading, setLoading] = useState(false)
-    const [userData, setUserData] = useState({email: null, password: null})
+    const [userData, setUserData] = useState({username: null, password: null})
 
 
     const onSubmit = (e) => {
@@ -15,8 +15,6 @@ const Auth = () => {
 
         axios.post('http://localhost:8080/auth/login', userData)
             .then(res => {
-                console.log('res', res.data)
-
                 if (res.data.success) {
                     handleSuccess(res.data.message)
                     localStorage.setItem('token', res.data.data.accessToken)
@@ -40,7 +38,7 @@ const Auth = () => {
                 <div className="input-group">
                     <label htmlFor="email">E-mail:</label>
                     <input type="email" id="email" name="email"
-                           onChange={e => setUserData({...userData, email: e.target.value})}
+                           onChange={e => setUserData({...userData, username: e.target.value})}
                            placeholder="Type your email" required={true}/>
                 </div>
                 <div className="input-group">

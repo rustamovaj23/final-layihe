@@ -1,4 +1,4 @@
-.addBtn{
+.addBtn {
     background-color: #0b315a;
     width: 100px;
     height: 40px;
@@ -6,19 +6,29 @@
     text-align: center;
     justify-content: center;
 }
-.addBtn:hover{
+
+.addBtn:hover {
     background-color: #0d3e72;
 }
-button{
+
+button {
     font-size: 17px;
     display: flex;
     align-items: center;
 }
-.add{
+
+.add {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     padding-right: 30px;
 }
-.table{
+
+.table {
     padding-top: 30px;
+}
+
+.product-list img {
+    width: 80px;
+    height: 120px;
+    border-radius: 4px;
 }

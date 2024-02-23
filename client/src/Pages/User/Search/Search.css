@@ -1,0 +1,113 @@
+.new-search h4 {
+    color: rgb(43, 43, 43);
+    font-size: 30px;
+    line-height: 42px;
+    font-family: "Playfair Display";
+}
+
+.new-search {
+    margin-bottom: 15px;
+}
+
+.new-search form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e8e8e8;
+    margin: 10px 0;
+}
+
+.new-search form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.new-search form button {
+    width: 40px;
+    height: 40px;
+    color: #2b2b2b;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-search form button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.new-search .new-search-text p {
+    font-size: 13px;
+    font-style: italic;
+}
+
+.search-result {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+.search-result .product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    height: 130px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.search-result .product-image {
+    width: 130px !important;
+    display: flex;
+    align-items: flex-start;
+}
+
+.search-result .product-image a img {
+    width: 78px;
+    height: 100px;
+}
+
+.search-result .product-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    flex: 1;
+}
+
+.search-result .product-name a {
+    color: rgb(43, 43, 43);
+    font-size: 22px;
+    font-family: "Playfair Display";
+}
+
+.search-result .product-description {
+    font-family: "Playfair Display";
+    color: rgb(109, 106, 106);
+    font-size: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* İlk iki satırda görünmesini sağlar */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.search-result .read-more a {
+    color: rgb(43, 43, 43);
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+    .search-result .product-item {
+        gap: 0;
+        max-height: 150px;
+    }
+}

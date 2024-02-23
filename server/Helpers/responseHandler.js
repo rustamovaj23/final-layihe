@@ -1,6 +1,6 @@
-const responseHandler = (resp, req, res, next) => {
+const responseHandler = (response, req, res, next) => {
     res
-        .status(resp.response.statusCode)
-        .json(resp.response)
+        .status(response.statusCode)
+        .json(response)
 }
 module.exports = responseHandler

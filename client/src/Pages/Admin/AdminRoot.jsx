@@ -4,11 +4,12 @@ import "./AdminRoot.css"
 import SideBar from '../../Layout/Admin/SideBar/SideBar'
 import Header from '../../Layout/Admin/Header/Header'
 import Footer from '../../Layout/Admin/Footer/Footer'
-import {handleError} from "../../Helpers/Helpers";
 import Axios from "../../Helpers/Axios";
+import {useAuth} from "../../Context/AuthContext";
 
 
 const AdminRoot = () => {
+    const {setIsLoggedIn} = useAuth()
 
     useEffect(() => {
         const token = localStorage.getItem('token')
@@ -16,6 +17,11 @@ const AdminRoot = () => {
             window.location = '/admin'
         } else {
             Axios.get('http://localhost:8080/auth/user')
+                .then(res => {
+                    if (res.data.success) {
+                        setIsLoggedIn(true)
+                    }
+                })
                 .catch(err => {
                     console.log('err', err)
                     window.location = '/admin'

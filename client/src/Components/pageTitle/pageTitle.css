@@ -1,0 +1,19 @@
+.page-title {
+    background: #FAFAF9;
+    height: 225px;
+    display: flex;
+    align-items: center;
+}
+
+.page-title h2 {
+    color: rgb(14, 14, 14);
+    font-size: 50px;
+    line-height: 66px;
+    font-family: "Playfair Display";
+}
+
+.page-title p {
+    color: rgb(109, 106, 106);
+    font-size: 17px;
+    font-family: "Lora";
+}

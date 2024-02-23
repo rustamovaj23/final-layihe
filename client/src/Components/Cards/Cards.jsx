@@ -1,22 +1,17 @@
-import React, {  useContext } from 'react'
-import Card from '../Card/Card'
-import dataContext from '../../Context/Context'
+import React from "react";
+import Card from "../Card/Card";
+import "./Cards.css";
 
-
-const Cards = () => {
-    const {data, setData} = useContext(dataContext)
-  return (
-    <div className='container'>
-        <div className="row">
-            {
-                data.map((item, index)=>{
-                    return(<Card key={index} item={item}/>)
-                })
-            }
-
+const Cards = ({products}) => {
+    return (
+        <div className="container">
+            <div className="row product-list mt-5">
+                {products.map((product, index) => {
+                    return <Card key={index} product={product}/>;
+                })}
+            </div>
         </div>
-    </div>
-  )
-}
+    );
+};
 
-export default Cards
+export default Cards;

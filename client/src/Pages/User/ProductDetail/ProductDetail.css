@@ -1,0 +1,388 @@
+.product-detail-page .product {
+    padding: 80px 0;
+}
+
+.product-detail-page .product .product-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+}
+
+.product-detail-page .product-info .left .product-images {
+    display: flex;
+    gap: 50px;
+}
+
+.product-detail-page .product-info .product-images .left .lg-react-element {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 120px;
+    max-width: 120px;
+}
+
+.product-detail-page .product-info .product-images .left a {
+    display: block;
+    width: 120px;
+    height: 145px;
+}
+
+.product-detail-page .product-info .product-images .left a img {
+    width: 120px;
+    height: 145px;
+}
+
+.product-detail-page .product-info .product-images .right img {
+    width: 100%;
+    max-width: 500px;
+    height: 645px;
+}
+
+.product-detail h2.product-name {
+    font-size: 38px;
+    font-weight: 500;
+    color: rgb(43, 43, 43);
+    font-family: "Playfair Display";
+}
+
+.product-detail .product-price {
+    color: #999;
+    font-weight: 400;
+}
+
+.product-detail .product-description {
+    color: rgb(109, 106, 106);
+    text-align: justify;
+    font-size: 15px;
+}
+
+.product-detail .add-to-basket {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+.product-detail .product-properties {
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.product-detail .product-properties li span {
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.product-detail .product-properties li .key {
+    font-weight: 500;
+    color: rgb(43, 43, 43)
+}
+
+.product-detail .product-properties li .value {
+    color: rgb(139, 139, 139);
+}
+
+.product-detail button.add-to-basket-btn {
+    background: #080808;
+    color: #fff;
+    height: 50px;
+    width: 180px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 0;
+}
+
+.product-detail .quantity {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border: 1px solid #eee;
+    padding: 0 15px;
+    width: 260px;
+    color: #999;
+    font-size: 14px;
+    border-right: none;
+}
+
+.product-detail .quantity .left {
+    flex: 1;
+}
+
+.product-detail .quantity .right {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-detail .quantity button {
+    background: transparent;
+    color: #999;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    margin: 0;
+    transition: 150ms ease color;
+}
+
+.product-detail .quantity .right button:hover {
+    color: #f34f3f
+}
+
+.product-tabs .nav-tabs .container {
+    display: flex;
+}
+
+.product-tabs .nav-tabs button {
+    border-radius: 0;
+    border: 1px solid #eee;
+    border-bottom: none;
+    color: rgb(27, 27, 27);
+    font-size: 12px;
+    background: transparent;
+    min-width: 200px;
+    width: fit-content;
+    height: 50px;
+    transition: 150ms ease;
+}
+
+.product-tabs .nav-tabs button.active {
+    background: #F34F3F;
+    color: #fff
+}
+
+.product-tabs h3 {
+    color: rgb(43, 43, 43);
+    font-size: 30px;
+    font-weight: 400;
+    margin: 25px 0 !important;
+}
+
+.product-tabs #product-description .description {
+    color: rgb(109, 106, 106);
+    text-align: justify;
+    font-size: 15px;
+}
+
+.product-tabs #product-information ul {
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.product-tabs #product-information ul li {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.product-tabs #product-information ul li span {
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.product-tabs #product-information ul li .key {
+    font-weight: 700;
+    color: rgb(43, 43, 43);
+    width: 100px;
+}
+
+.product-tabs #product-information ul li .value {
+    color: rgb(139, 139, 139);
+}
+
+.product-tabs #product-reviews .reviews {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-tabs #product-reviews .review {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    height: auto;
+}
+
+.product-tabs #product-reviews .user-image img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+
+.product-tabs .review-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.product-tabs .review-content .top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-tabs .review-content .username {
+    font-size: 12px;
+    color: rgb(27, 27, 27);
+    font-weight: 500;
+}
+
+.product-tabs .review-content .created_at {
+    font-size: 10px;
+    color: rgb(175, 175, 175);
+    font-weight: 500;
+}
+
+.product-tabs .review-content .bottom .text {
+    font-size: 15px;
+    color: rgb(109, 106, 106);
+    line-height: 24px;
+}
+
+.product-tabs .review-form label, .product-tabs .review-form span {
+    color: rgb(109, 106, 106);
+    font-size: 15px;
+}
+
+.product-tabs .review-form textarea {
+    min-height: 150px;
+    border-radius: 0;
+}
+
+.product-tabs .review-form .form-control {
+    border-radius: 0;
+    height: 60px;
+}
+
+.product-tabs .review-form button {
+    border-radius: 0;
+    background: #F34F3F;
+    width: 150px;
+    height: 50px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-detail-page hr {
+    width: 100%;
+    border-color: #ccc;
+}
+
+.related-products h5 {
+    font-size: 12px;
+    color: rgb(27, 27, 27);
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .product-detail-page .product-info .left .product-images {
+        gap: 20px;
+    }
+
+    .product-detail-page .product-info .product-images .left .lg-react-element {
+        width: 118px;
+        max-width: 118px;
+    }
+
+    .product-detail-page .product-info .product-images .left a {
+        width: 118px;
+        height: 83px;
+    }
+
+    .product-detail-page .product-info .product-images .left a img {
+        width: 118px;
+        height: 83px;
+    }
+
+    .product-detail-page .product-info .product-images .right {
+        width: 100%;
+    }
+
+    .product-detail-page .product-info .product-images .right img {
+        width: 100%;
+        max-width: 305px;
+        height: 394px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .product-detail-page .product .product-info {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .product-detail-page .product-info .product-images .left a {
+        height: 172px;
+    }
+
+    .product-detail-page .product-info .product-images .left a img {
+        height: 172px;
+
+    }
+
+    .product-detail-page .product-info .product-images .right img {
+        max-width: 100%;
+        height: 700px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .product-detail-page .product-info .left .product-images {
+        flex-direction: column-reverse;
+    }
+
+    .product-detail-page .product-info .product-images .left a {
+        height: 172px;
+    }
+
+    .product-detail-page .product-info .product-images .left .lg-react-element {
+        flex-direction: row;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .product-detail-page .product-info .product-images .left a {
+        width: 135px;
+        height: 180px;
+    }
+
+    .product-detail-page .product-info .product-images .left a img {
+        width: 135px;
+        height: 180px;
+    }
+
+    .product-tabs .nav-tabs .container {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+    .product-detail-page .product-info .product-images .left .lg-react-element {
+        flex-direction: row;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .product-detail-page .product-info .product-images .left a {
+        width: 50%;
+        height: 266px;
+    }
+
+    .product-detail-page .product-info .product-images .left a img {
+        width: 100%;
+        height: 266px;
+    }
+}

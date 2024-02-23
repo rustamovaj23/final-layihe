@@ -1,21 +1,34 @@
-import React from 'react'
-import "./Card.css"
+import React, {useContext} from "react";
+import dataContext from "../../Context/Context";
+import {Link} from 'react-router-dom'
 
-const Card = ({item}) => {
-  return (
-    <div className='col-lg-3 col-md-6 mb-4 mr-2' style={{"paddingTop":"30px"}}>
-        <div className="card" style={{"width":"38vh"}}>
-            <div className="card-photo" style={{"width":"100px"}}>
-                <img src={item.image} alt="" style={{"width":"38vh"}}/>
-            </div>
-            <div className="card-text">
-                <a>{item.name}</a>
-                <a style={{"color":"#6d6a6a"}}>${item.price}</a>
-            </div>
+const Card = ({product}) => {
+    const {AddtoBasket} = useContext(dataContext);
+
+    const addToBasket = (e, product) => {
+        e.preventDefault()
+        AddtoBasket(product)
+    }
+
+    return (
+        <div className="col-lg-3 col-md-4 col-sm-6 col-12 product">
+            <Link to={`/product/${product.slug}`} className="card">
+                <div className="card-photo">
+                    <img src={product.images[0].url} alt=""/>
+                </div>
+                <div className="card-text">
+                    <p className="product-name">{product.name}</p>
+                    <div className="product-price-add-to-cart">
+                        <p className="product-price">${product.price}</p>
+                        <button
+                            onClick={e => addToBasket(e, product)}>
+                            Səbətə at
+                        </button>
+                    </div>
+                </div>
+            </Link>
         </div>
+    );
+};
 
-    </div>
-  )
-}
-
-export default Card
+export default Card;

@@ -1,20 +1,112 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .flower-categories {
     display: flex;
-    padding-left: 110px;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 40px;
 }
 
-.flower-categories a {
+.flower-categories .links {
+    transition: 300ms ease-in-out height, 300ms ease-in-out visibility;
+}
+
+#mobile-categories > a {
+    display: none;
+}
+
+.flower-categories .links a, #mobile-categories > a {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
     margin-right: 10px; /* Bağlantılar arasında 10px boşluk bırak */
     color: #1b1b1b; /* Bağlantı rengini siyah yap */
     text-decoration: none; /* Bağlantı altı çizgisini kaldır */
 }
 
-.flower-categories a:hover {
+.flower-categories .links a:hover, .flower-categories .links a.active {
     color: #f34f3f; /* Bağlantı rengini gri yap hover durumunda */
+}
+
+.flower-categories .filter a.dropdown-toggle {
+    font-weight: 500;
+    font-size: 12px !important;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #1b1b1b; /* Bağlantı rengini siyah yap */
+    text-decoration: none; /* Bağlantı altı çizgisini kaldır */
+}
+
+.flower-categories .filter ul.dropdown-menu {
+    width: 380px;
+    grid-template-columns: 1fr 1fr;
+    border-color: #f2f2f2;
+    border-radius: 0;
+    padding: 15px;
+}
+
+.flower-categories .filter ul.dropdown-menu.show {
+    display: grid;
+}
+
+.flower-categories .filter ul.dropdown-menu ul li.heading {
+    font-size: 18px;
+    color: rgb(43, 43, 43);
+    margin-bottom: 10px;
+}
+
+.flower-categories .filter ul.dropdown-menu ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 30px;
+    color: #333;
+    font-size: 14px;
+    transition: 100ms ease font-weight;
+}
+
+.flower-categories .filter ul.dropdown-menu ul li a:hover {
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+    .flower-categories {
+        align-items: flex-start;
+    }
+
+    #mobile-categories > a {
+        display: inline-block;
+    }
+
+    #mobile-categories .links {
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #mobile-categories.mobile-show .links {
+        height: 180px;
+        max-height: 250px;
+        display: flex;
+        flex-direction: column;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #mobile-categories {
+        flex: 1;
+        max-width: 250px;
+    }
+
+    .filter {
+        width: 60px;
+    }
 }

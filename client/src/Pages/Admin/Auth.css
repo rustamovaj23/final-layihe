@@ -5,42 +5,42 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
-  
-  .login-form {
+}
+
+.login-form {
     width: 300px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center; /* Login formunun içeriğini merkezlemek için */
-  }
-  
-  .login-form h2 {
+}
+
+.login-form h2 {
     text-align: center;
-  }
-  
-  .input-group {
+}
+
+.input-group {
     position: relative;
     margin-bottom: 20px;
-  }
-  
-  .input-group input {
+}
+
+.input-group input {
     width: calc(100% - 30px); /* Simgenin genişliğini düşürmek için */
     padding-left: 30px; /* Simgenin sağ tarafında boşluk bırakmak için */
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
-  }
-  
-  .icon {
+}
+
+.icon {
     position: absolute;
     left: 5px;
     top: 50%;
     transform: translateY(-50%);
-  }
-  
-  button {
+}
+
+button {
     background-color: #022953;
     color: #fff;
     border: none;
@@ -48,10 +48,11 @@
     padding: 10px 20px; /* Login butonunun genişliğini ve yüksekliğini ayarlamak için */
     cursor: pointer;
     margin-top: 10px; /* Butonu biraz yukarıya çıkarmak için */
-  }
-  button:hover{
+}
+
+button:hover {
     background-color: #08498f;
-  }
+}
 
   
   
