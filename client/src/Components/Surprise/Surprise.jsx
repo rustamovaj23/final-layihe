@@ -1,6 +1,5 @@
 import React from "react";
 import "./Surprise.css"
-import videoFlow from "../../assets/flow.mp4";
 
 
 const Surprise = ({surpriseText}) => {
@@ -9,8 +8,7 @@ const Surprise = ({surpriseText}) => {
             <div className="container">
                 <div className="right-side-video">
                     <video controls>
-                        <source src={videoFlow} type="video/mp4"/>
-                        <source src={videoFlow} type="video/ogg"/>
+                        <source src='/assets/flow.mp4' type="video/mp4"/>
                     </video>
                 </div>
                 <div className="left-side-text">

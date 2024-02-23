@@ -1,10 +1,10 @@
 import React, {useContext, useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import dataContext from "../../../Context/Context";
 
 const HeaderMenu = () => {
-    const {basket} =
-        useContext(dataContext);
+    const {basket} = useContext(dataContext);
+    const navigate = useNavigate();
 
     const [searchQuery, setSearchQuery] = useState('')
 
@@ -12,6 +12,8 @@ const HeaderMenu = () => {
 
     const search = (e) => {
         e.preventDefault()
+        navigate('/search?query=' + encodeURIComponent(searchQuery)) // Yönlendirme
+        setSearchQuery('') // Yönlendirmeden sonra searchQuery'yi temizle
     }
 
     return (
@@ -143,7 +145,7 @@ const HeaderMenu = () => {
                         </a>
                         <div className="dropdown-menu">
                             <form onSubmit={e => search(e)}>
-                                <input type="text" placeholder="Search" onChange={e => setSearchQuery(e.target.value)}/>
+                                <input type="text" value={searchQuery} placeholder="Search" onChange={e => setSearchQuery(e.target.value)}/>
                                 <button type="submit">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                                         <path

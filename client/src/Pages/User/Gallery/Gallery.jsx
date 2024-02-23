@@ -1,12 +1,11 @@
 import React from 'react'
 import "./Gallery.css"
-import PortfolioGallery from '../../../Components/PortfolioGallery/PortfolioGallery'
 import Pictures from '../../../Components/Pictures/Pictures'
-
+import PageTitle from "../../../Components/pageTitle/pageTitle";
 const Gallery = () => {
     return (
         <div>
-            <PortfolioGallery/>
+            <PageTitle title='Portfolio Gallery'/>
             <Pictures/>
         </div>
     )

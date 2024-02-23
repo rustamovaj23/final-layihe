@@ -19,7 +19,7 @@ button {
 
 .add {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     padding-right: 30px;
 }
 
@@ -27,7 +27,7 @@ button {
     padding-top: 30px;
 }
 
-.product-list img{
+.product-list img {
     width: 80px;
     height: 120px;
     border-radius: 4px;

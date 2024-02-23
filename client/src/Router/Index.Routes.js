@@ -1,4 +1,3 @@
-import Standart from "../Components/Standart/Standart";
 import AboutUs from "../Pages/User/AboutUs/AboutUs";
 import Cart from "../Pages/User/Cart/Cart";
 import ContactUs from "../Pages/User/ContactUs/ContactUs";
@@ -20,6 +19,7 @@ import Quote from "../Pages/User/Quote/Quote";
 import Videos from "../Pages/User/Videos/Videos";
 import ProductDetail from "../Pages/User/ProductDetail/ProductDetail"
 import Search from "../Pages/User/Search/Search";
+import Standart from "../Pages/User/Standart/Standart";
 
 
 const ROUTER = [

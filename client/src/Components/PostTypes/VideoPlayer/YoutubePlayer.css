@@ -1,0 +1,36 @@
+.all-link-page iframe {
+    width: 100%;
+    height: 538px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .all-link-page iframe {
+        height: 453px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .all-link-page iframe {
+        height: 390px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .all-link-page iframe {
+        height: 432px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .all-link-page iframe {
+        height: 338px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .all-link-page iframe {
+        min-height: 250px;
+        height: auto;
+    }
+}
+

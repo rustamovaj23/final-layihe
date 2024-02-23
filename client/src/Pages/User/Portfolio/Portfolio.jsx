@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react'
 import "./Portfolio.css"
-import Standart from '../../../Components/Standart/Standart'
 import LoadMoreBtn from '../../../Components/LoadMoreBtn/LoadMoreBtn'
 import Axios from "../../../Helpers/Axios";
 import {handleError} from "../../../Helpers/Helpers";
 import Loading from "../../../Components/Loading/Loading";
 import Cards from "../../../Components/Cards/Cards";
 import PortfolioCategories from "../../../Components/PortfolioCategories/PortfolioCategories";
+import PageTitle from "../../../Components/pageTitle/pageTitle";
 
 const Portfolio = () => {
     const [categories, setCategories] = useState([]);
@@ -84,7 +84,7 @@ const Portfolio = () => {
 
     return (
         <div>
-            <Standart/>
+            <PageTitle title='Portfolio Standart'/>
             {loading && <Loading/>}
             <div className="container category-products-container">
                 <PortfolioCategories categories={categories} categorySlug={categorySlug}

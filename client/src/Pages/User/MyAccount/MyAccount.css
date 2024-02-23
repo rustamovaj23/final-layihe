@@ -1,55 +1,83 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.account{
-    background-color: #f3f6f8;
-    width: 100%;
-    height: 35vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 110px;
-}
-.remember-inp{
-    display: flex;
-    gap: 7px;
-}
-.remember-inp p{
+.remember-inp {
     display: flex;
     align-items: center;
-    padding-top: 15px;
+    justify-content: flex-start;
+    gap: 30px;
 }
 
-.first-inp p{
+.first-inp p {
     height: 1vh;
 }
-.second-inp p{
+
+.second-inp p {
     height: 1vh;
 }
-.inputes{
+
+.inputes {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.inputlars{
-    width: 500px;
+
+.inputlars {
+    width: 600px;
     height: 60px;
-    border: 1px solid gray;
+    border: 1px solid #dddddd;
     outline: none;
+    padding: 0 15px;
+    font-size: 12px;
+    color: rgb(109, 106, 106)
 }
-.login-btnn{
+
+.login-btnn {
     background-color: #f34f3f;
-    width: 100px;
-    height: 40px;
+    width: 135px;
+    height: 50px;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
 }
-.logins{
-    padding-left: 100px;
+
+.logins {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.check{
+
+.check {
     margin-top: 20px;
+}
+
+.login-txt p {
+    font-size: 36px;
+    font-weight: 500;
+    font-family: "Playfair Display";
+}
+
+.inputes p {
+    font-size: 15px;
+    color: rgb(109, 106, 106);
+}
+
+.last-txt p {
+    font-size: 15px;
+    color: rgb(109, 106, 106);
+}
+
+@media only screen and (max-width: 768px) {
+    .remember-inp {
+        justify-content: center;
+    }
+
+    .inputlars {
+        width: 100%;
+    }
+
+    .remember-inp {
+        justify-content: space-between;
+    }
 }

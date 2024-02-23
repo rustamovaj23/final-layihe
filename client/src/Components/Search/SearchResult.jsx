@@ -1,75 +1,33 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 
-const SearchResult = () => {
+const SearchResult = ({products}) => {
     return (
         <div className="search-result">
-            <div className="product-item">
-                <div className="product-image">
-                    <a href="#">
-                        <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-14-img.jpg"
-                             alt=""/>
-                    </a>
-                </div>
-                <div className="product-content">
-                    <div className="product-name">
-                        <a href="#">
-                            <h5>Majesty Palm</h5>
-                        </a>
+            {
+                products.map(product => <div key={product.id} className="product-item">
+                    <div className="product-image">
+                        <Link to={`/product/${product.slug}`}>
+                            <img src={product.images[0].url}
+                                 alt=""/>
+                        </Link>
                     </div>
-                    <div className="product-description">
-                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                        Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non…
+                    <div className="product-content">
+                        <div className="product-name">
+                            <Link to={`/product/${product.slug}`}>
+                                <h5>{product.name}</h5>
+                            </Link>
+                        </div>
+                        <div className="product-description">
+                            {product.description}
+                        </div>
+                        <div className="read-more">
+                            <Link to={`/product/${product.slug}`}>Read more</Link>
+                        </div>
                     </div>
-                    <div className="read-more">
-                        <a href="#">Read more</a>
-                    </div>
-                </div>
-            </div>
-            <div className="product-item">
-                <div className="product-image">
-                    <a href="#">
-                        <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-14-img.jpg"
-                             alt=""/>
-                    </a>
-                </div>
-                <div className="product-content">
-                    <div className="product-name">
-                        <a href="#">
-                            <h5>Majesty Palm</h5>
-                        </a>
-                    </div>
-                    <div className="product-description">
-                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                        Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non…
-                    </div>
-                    <div className="read-more">
-                        <a href="#">Read more</a>
-                    </div>
-                </div>
-            </div>
-            <div className="product-item">
-                <div className="product-image">
-                    <a href="#">
-                        <img src="https://fiorello.qodeinteractive.com/wp-content/uploads/2018/04/shop-14-img.jpg"
-                             alt=""/>
-                    </a>
-                </div>
-                <div className="product-content">
-                    <div className="product-name">
-                        <a href="#">
-                            <h5>Majesty Palm</h5>
-                        </a>
-                    </div>
-                    <div className="product-description">
-                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                        Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non…
-                    </div>
-                    <div className="read-more">
-                        <a href="#">Read more</a>
-                    </div>
-                </div>
-            </div>
+                </div>)
+            }
         </div>
     )
 }
